@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * @file
+ * Contains commerce_price_per_product.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function commerce_price_per_product_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the commerce_price_per_product module.
+    case 'help.page.commerce_price_per_product':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module moves the price from product variations to product entity. Useful if you do not need different price per variations.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function commerce_price_per_product_theme() {
+  return [
+    'commerce_price_per_product' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_entity_field_storage_info().
+ */
+function commerce_price_per_product_entity_field_storage_info(\Drupal\Core\Entity\EntityTypeInterface $entity_type) {
+  if ($entity_type->id() === 'commerce_product') {
+    $definitions['field_price_per_product'] = \Drupal\Core\Field\BaseFieldDefinition::create('commerce_price')
+      ->setName('field_price_per_product')
+      ->setLabel(t('Price per product'))
+      ->setTranslatable(TRUE)
+      ->setCardinality(1)
+      ->setTargetEntityTypeId($entity_type->id());
+
+    return $definitions;
+  }
+}
+
+/**
+ * Implements hook_entity_bundle_field_info().
+ */
+function commerce_price_per_product_entity_bundle_field_info(\Drupal\Core\Entity\EntityTypeInterface $entity_type, $bundle, array $base_field_definitions) {
+  if ($entity_type->id() === 'commerce_product') {
+    $fields = [];
+
+    $fields['field_price_per_product'] = \Drupal\Core\Field\BaseFieldDefinition::create('commerce_price')
+      ->setLabel(t('Price per product'))
+      ->setDisplayOptions('view', array(
+        'label' => 'hidden',
+        'type' => 'hidden',
+        'weight' => 0,
+      ))
+      ->setDisplayOptions('form', array(
+        'type' => 'commerce_price',
+        'weight' => 50,
+      ));
+
+    return $fields;
+  }
+}

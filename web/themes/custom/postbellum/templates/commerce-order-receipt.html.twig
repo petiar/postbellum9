@@ -1,0 +1,173 @@
+{#
+/**
+ * @file
+ * Template for the order receipt.
+ *
+ * Available variables:
+ * - order_entity: The order entity.
+ * - billing_information: The billing information.
+ * - shipping_information: The shipping information.
+ * - payment_method: The payment method.
+ * - totals: An array of order totals values with the following keys:
+ *   - subtotal: The order subtotal price.
+ *   - adjustments: An array of adjustment totals:
+ *     - type: The adjustment type.
+ *     - label: The adjustment label.
+ *     - total: The adjustment total price.
+ *     - weight: The adjustment weight, taken from the adjustment type.
+ *   - total: The order total price.
+ *
+ * @ingroup themeable
+ */
+#}
+<table style="margin: 15px auto 0 auto; max-width: 768px; font-family: arial,sans-serif">
+  <tbody>
+  <tr>
+    <td>
+      <table style="margin-left: auto; margin-right: auto; max-width: 768px; text-align: center;">
+        <tbody>
+        <tr>
+          <td>
+            <a href="{{ url('<front>') }}" style="color: #0e69be; text-decoration: none; font-weight: bold; margin-top: 15px;">{{ order_entity.getStore.label }}</a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <table style="text-align: center; min-width: 450px; margin: 5px auto 0 auto; border: 1px solid #cccccc; border-radius: 5px; padding: 40px 30px 30px 30px;">
+        <tbody>
+        <tr>
+          <td style="font-size: 30px; padding-bottom: 30px">Potvrdenie objednávky</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold; padding-top:15px; padding-bottom: 15px; text-align: left; border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc">
+            Detail objednávky číslo {{ order_entity.getOrderNumber }}:
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {% block order_items %}
+              <table style="padding-top: 15px; padding-bottom:15px; width: 100%">
+                <tbody style="text-align: left;">
+                {% for order_item in order_entity.getItems %}
+                  <tr>
+                    <td>
+                      {{ order_item.getQuantity|number_format }} x
+                    </td>
+                    <td>
+                      <span>{{ order_item.label }}</span>
+                      <span style="float: right;">{{ order_item.getTotalPrice|commerce_price_format }}</span>
+                    </td>
+                  </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+            {% endblock %}
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <table style="width: 100%; padding-top:15px; padding-bottom: 15px; text-align: left; border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc">
+                <tbody>
+                <tr>
+                    <td style="padding-top: 5px; font-weight: bold;width: 50%;">Doručovacia adresa</td>
+                    <td style="padding-top: 5px; font-weight: bold;width: 50%;">Fakturačná adresa</td>
+                </tr>
+                <tr>
+                    <td>
+                      {% block shipping_information %}
+                        {{ shipping_information }}
+                      {% endblock %}
+                    </td>
+                    <td>
+                      {% block billing_information %}
+                        {{ billing_information }}
+                      {% endblock %}
+                    </td>
+                </tr>
+                {% if payment_method %}
+                  <tr>
+                    <td style="font-weight: bold; margin-top: 10px;">Spôsob úhrady</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      {% block payment_method %}
+                        {{ payment_method }}
+                      {% endblock %}
+                    </td>
+                  </tr>
+                {% endif %}
+                </tbody>
+              </table>
+            {% if payment_instructions %}
+            {% block payment_instructions %}
+              <table>
+                <tbody>
+                  <tr>
+                    <td style="font-weight: bold; margin-top: 10px;">Inštrukcie pre úhradu objednávky</td>
+                  </tr>
+                  <tr>
+                    <td>
+                        {{ payment_instructions }}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            {% endblock %}
+            {% endif %}
+            {% if payments %}
+              <p>Vaše platby:</p>
+            <table style="width:100%;">
+              <tbody>
+              <tr>
+                <th>Spôsob platby</th>
+                <th>Dátum a čas</th>
+                <th>Suma</th>
+              </tr>
+              {% for payment in payments  %}
+                <tr>
+                  <td>{{ payment.label }}</td>
+                  <td>{{ payment.timestamp|date("d. m. Y, H:i") }}</td>
+                  <td>{{ payment.amount }}</td>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+            {% endif %}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p style="margin-bottom: 0;">
+              Medzisúčet: {{ totals.subtotal|commerce_price_format }}
+            </p>
+          </td>
+        </tr>
+        {% for adjustment in totals.adjustments %}
+          <tr>
+            <td>
+              <p style="margin-bottom: 0;">
+                {{ adjustment.label }}: {{ adjustment.total|commerce_price_format }}
+              </p>
+            </td>
+          </tr>
+        {% endfor %}
+        <tr>
+          <td>
+            <p style="font-size: 24px; padding-top: 15px; padding-bottom: 5px;">
+              Objednávka celkom: {{ order_entity.getTotalPrice|commerce_price_format }}
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {% block additional_information %}
+              Ďakujeme za vašu objednávku!
+            {% endblock %}
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  </tbody>
+</table>

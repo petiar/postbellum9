@@ -1,0 +1,6 @@
+postbellum_helpers.settings_form:
+  title: 'Postbellum Configuration'
+  route_name: postbellum_helpers.settings_form
+  description: 'Postbellum Eshop Configuration Page'
+  parent: commerce_shipping.configuration
+  weight: 0

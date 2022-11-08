@@ -1,0 +1,22 @@
+<!-- Add you custom twig html here -->
+<html>
+<head>
+    <title>Invoice number {{ order_entity.getOrderNumber }}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style>
+        *{ font-family: DejaVu Sans !important;}
+    </style>
+</head>
+<body>
+<h1>{{ order_entity.getStore.label }}</h1>
+<h2>{{ 'Order #@number details:'|t({'@number': order_entity.getOrderNumber}) }}</h2>
+<h3>Shipping information</h3>
+<p>{{ shipping_information }}</p>
+<h3>Billing information</h3>
+<p>{{ billing_information }}</p>
+
+<blockquote>More information coming...</blockquote>
+
+<h6>Some small letters too! ščťžô</h6>
+</body>
+</html>

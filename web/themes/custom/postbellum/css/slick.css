@@ -1,0 +1,18 @@
+.slick-prev {
+  left: 3%;
+  z-index: 1;
+}
+
+.slick-next {
+  right: 3%;
+}
+
+.slick-prev:before {
+  color: #333;
+}
+
+.slick-next:before {
+  color: #333333;
+}
+
+/*# sourceMappingURL=slick.css.map */

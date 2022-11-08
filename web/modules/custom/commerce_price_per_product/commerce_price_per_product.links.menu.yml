@@ -1,0 +1,5 @@
+commerce_price_per_product.price_per_product_settings_form:
+  title: 'Price per product settings'
+  description: 'Manages price per product settings'
+  parent: commerce_product.configuration
+  route_name: commerce_price_per_product.price_per_product_settings_form

@@ -1,0 +1,24 @@
+name: PostBellum
+type: theme
+description: 'Custom theme for the PostBellum eshop.'
+package: PostBellum
+core_version_requirement: ^9
+libraries:
+  - postbellum/global-styling
+
+base theme: bootstrap
+
+regions:
+  header: Header
+  navigation: Navigation
+  navigation_collapsible: 'Navigation (Collapsible)'
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  sidebar_first: Primary
+  sidebar_second: Secondary
+  footer: Footer
+  footer_1: Footer 1
+  footer_2: Footer 2
+  footer_3: Footer 3
+  footer_4: Footer 4

@@ -1,0 +1,13 @@
+{
+    "name": "commerce_price_per_product",
+    "type": "drupal-module",
+    "description": "This module moves the price from product variations to product entity. Useful if you do not need different price per variations.",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/commerce_price_per_product",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/commerce_price_per_product",
+        "source": "http://cgit.drupalcode.org/commerce_price_per_product",
+    },
+}

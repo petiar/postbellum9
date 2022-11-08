@@ -1,0 +1,7 @@
+commerce_trustpay.error:
+  path: '/trustpay/error'
+  defaults:
+    _controller: '\Drupal\commerce_trustpay\Controller\TrustpayResponse::onError'
+    _title: 'Error response from Trustpay'
+  requirements:
+    _permission: 'access content'

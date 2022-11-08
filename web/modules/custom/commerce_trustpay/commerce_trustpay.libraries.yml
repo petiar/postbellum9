@@ -1,0 +1,10 @@
+checkout:
+  version: VERSION
+  js:
+    https://mapi.trustpay.eu/mapi5/Scripts/TrustPay/popup.js: { type: external }
+    js/commerce_trustpay.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupalSettings

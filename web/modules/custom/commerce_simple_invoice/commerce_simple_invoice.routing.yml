@@ -1,0 +1,15 @@
+entity.commerce_simple_invoice.pdf:
+  path: '/user/{user}/orders/{commerce_order}/pdf'
+  defaults:
+    _entity_view: 'commerce_order'
+  requirements:
+    _entity_access: 'commerce_order.view'
+
+
+commerce_simple_invoice.simple_invoice_controller_hello:
+  path: '/orders/{commerce_order}/pdf'
+  defaults:
+    _controller: '\Drupal\commerce_simple_invoice\Controller\SimpleInvoiceController::generatePdf'
+    _title: 'Generate PDF'
+  requirements:
+    _permission: 'access content'

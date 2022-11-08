@@ -1,0 +1,294 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  background-image: url("../assets/merch-holubica-stvorec.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#header {
+  background-image: url("https://www.postbellum.sk/wp-content/uploads/sites/2/2016/02/intro-1024x682.jpg");
+}
+
+.navbar .logo {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.navbar .logo img {
+  max-height: 45px;
+}
+
+footer {
+  margin-top: 10px;
+}
+footer .copy {
+  text-align: center;
+}
+
+article .field--name-price {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.carousel .item img {
+  margin: 0px auto;
+}
+
+.eu-cookie-compliance-banner {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.sliding-popup-bottom {
+  width: 100%;
+}
+
+.cart-link {
+  padding: 0;
+  margin: 0;
+}
+.cart-link a {
+  font-weight: bold;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  line-height: 21px;
+  position: relative;
+  display: block;
+  text-align: right;
+}
+
+.view.view-produkty .views-field-title,
+.view.view-produkty .views-field-price__number {
+  text-align: center;
+}
+
+.tile.middle {
+  background-color: #333;
+  color: #ccc;
+}
+
+.radio.form-item-purchased-entity-0-attributes-attribute-farba label,
+.checkbox.form-item-purchased-entity-0-attributes-attribute-farba label {
+  padding-left: 0;
+  text-align: center;
+}
+
+.radio + .radio, .checkbox + .checkbox {
+  margin-top: 0;
+}
+
+.form-item-purchased-entity-0-attributes-attribute-velkost,
+.form-item-purchased-entity-0-attributes-attribute-obdobie {
+  border: 2px solid #222;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.form-item-purchased-entity-0-attributes-attribute-velkost.radio,
+.form-item-purchased-entity-0-attributes-attribute-obdobie.radio {
+  display: inline-block;
+}
+.form-item-purchased-entity-0-attributes-attribute-velkost label,
+.form-item-purchased-entity-0-attributes-attribute-obdobie label {
+  min-height: auto;
+  font-weight: bold;
+  padding: 0px 15px;
+  font-size: 1.1em;
+}
+.form-item-purchased-entity-0-attributes-attribute-velkost input,
+.form-item-purchased-entity-0-attributes-attribute-obdobie input {
+  display: none;
+}
+.form-item-purchased-entity-0-attributes-attribute-velkost input:checked ~ label,
+.form-item-purchased-entity-0-attributes-attribute-obdobie input:checked ~ label {
+  background-color: #222;
+  color: #fff;
+}
+
+.product--rendered-attribute__selected ~ label.option {
+  border: none;
+}
+.product--rendered-attribute__selected ~ label.option .color_field__swatch--circle {
+  border: 2px solid #222;
+}
+
+.commerce-order-item-add-to-cart-form legend {
+  display: none;
+}
+.commerce-order-item-add-to-cart-form .field-suffix .input-group-addon {
+  display: none;
+}
+
+.panel-default > .panel-heading {
+  background-color: #222;
+  color: #fff;
+}
+
+.color_field__swatch--circle {
+  border: 1px solid #ccc;
+}
+
+.zlava {
+  width: 100px;
+  height: 100px;
+  color: white;
+  position: absolute;
+  z-index: 100;
+  background-color: #f04124;
+  right: -50px;
+  top: -50px;
+  transform: rotate(45deg);
+  padding-top: 75px;
+  text-align: center;
+}
+
+.layout--postbellum .image {
+  overflow: hidden;
+  position: relative;
+}
+.layout--postbellum img {
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.layout--postbellum img:hover {
+  -webkit-filter: grayscale(0%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+.layout--postbellum .row {
+  margin-bottom: 15px;
+}
+.layout--postbellum section.block-product-block {
+  background-color: #222;
+  margin-bottom: 10px;
+}
+.layout--postbellum section.block-product-block:hover {
+  background-color: #000;
+}
+.layout--postbellum section.block-product-block:hover img {
+  -webkit-filter: grayscale(0%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+.layout--postbellum .text {
+  color: #fff;
+  padding: 0 10px;
+}
+.layout--postbellum article {
+  position: relative;
+}
+.layout--postbellum .price {
+  font-size: 1.5em;
+}
+
+footer {
+  color: #fff;
+}
+footer .container {
+  background-color: #000;
+}
+footer .container ul {
+  padding-left: 0;
+}
+footer .container li {
+  list-style: none;
+}
+footer .container .nav > li > a {
+  padding: 0;
+}
+footer .container .nav > li > a:hover,
+footer .container .nav > li > a:focus {
+  background: none;
+  text-decoration: underline;
+}
+
+@media (min-width: 769px) {
+  .cart-link {
+    float: right;
+  }
+  .cart-link a {
+    text-align: left;
+  }
+
+  .layout--postbellum .small .image,
+.layout--postbellum .tiny .image {
+    display: block;
+    width: 100%;
+  }
+  .layout--postbellum .medium .text {
+    width: 50%;
+  }
+  .layout--postbellum .medium .image {
+    width: 50%;
+  }
+  .layout--postbellum .medium .price,
+.layout--postbellum .large .price {
+    margin-top: 1em;
+  }
+  .layout--postbellum section.block-product-block {
+    margin-bottom: 0;
+  }
+
+  .eu-cookie-compliance-content {
+    padding: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .layout--postbellum .small,
+.layout--postbellum .tiny {
+    overflow: hidden;
+  }
+  .layout--postbellum .small .text,
+.layout--postbellum .tiny .text {
+    width: 100%;
+    height: 50%;
+    bottom: -50%;
+    position: absolute;
+    z-index: 1200;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(0%);
+    transition: all 0.5s;
+  }
+  .layout--postbellum .small .image,
+.layout--postbellum .tiny .image {
+    display: block;
+    width: 100%;
+  }
+  .layout--postbellum .tiny .text {
+    bottom: -100%;
+    height: 100%;
+  }
+  .layout--postbellum .small:hover .text {
+    transform: translateY(-100%);
+  }
+  .layout--postbellum .tiny:hover .text {
+    transform: translateY(-100%);
+  }
+  .layout--postbellum .medium .text,
+.layout--postbellum .medium .image,
+.layout--postbellum .large .text,
+.layout--postbellum .large .image {
+    width: 50%;
+    float: left;
+  }
+  .layout--postbellum .medium .text,
+.layout--postbellum .large .text {
+    padding-right: 15px;
+    text-align: right;
+  }
+  .layout--postbellum .medium .image,
+.layout--postbellum .large .image {
+    padding-left: 15px;
+  }
+}
+/* ugly hack for the checkboxes */
+.radio input[type=radio], .radio-inline input[type=radio], .checkbox input[type=checkbox], .checkbox-inline input[type=checkbox] {
+  margin-left: 0px;
+}
+
+/*# sourceMappingURL=style.css.map */

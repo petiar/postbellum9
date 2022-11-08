@@ -1,0 +1,7 @@
+commerce_price_per_product.price_per_product_settings_form:
+  path: '/admin/commerce/config/products/price_per_product_settings'
+  defaults:
+    _form: '\Drupal\commerce_price_per_product\Form\PricePerProductSettingsForm'
+    _title: 'PricePerProductSettingsForm'
+  requirements:
+    _access: 'TRUE'

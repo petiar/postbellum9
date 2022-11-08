@@ -1,0 +1,5 @@
+entity.commerce_simple_invoice.pdf:
+  route_name: entity.commerce_simple_invoice.pdf
+  base_route: entity.commerce_order.user_view
+  title: PDF Invoice
+  weight: 15

@@ -1,0 +1,5 @@
+services:
+  Drupal\postbellum_helpers\EventSubscriber\PostbellumEventSubscriber:
+    arguments: ['@language_manager', '@plugin.manager.mail']
+    tags:
+      - { name: 'event_subscriber' }

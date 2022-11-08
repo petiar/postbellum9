@@ -1,0 +1,40 @@
+layout_postbellum:
+  label: 'PostBellum layout'
+  path: layouts/postbellum_homepage
+  template: layout--postbellum-homepage
+  library: postbellum/postbellum_homepage
+  category: 'PostBellum'
+  default_region: middle
+  icon_map:
+    - [top]
+    - [first_above, second_above]
+    - [first_middle, second_middle, third_middle]
+    - [first_below, second_below]
+    - [bottom]
+  regions:
+    top:
+      label: 'Veľké hore'
+    block_1_1:
+      label: '1. riadok, veľké vľavo'
+    block_1_2:
+      label: '1. riadok, malé vpravo'
+    block_2_1:
+      label: '2. riadok, tretinka vľavo'
+    block_2_2:
+      label: '2. riadok, tretinka v strede'
+    block_2_3:
+      label: '2. riadok, tretinke vpravo'
+    block_3_1:
+      label: '3. riadok, polovica vľavo'
+    block_3_2:
+      label: '3. riadok, polovica vpravo'
+    block_4_1:
+      label: '4. riadok, prvá štvrtinka'
+    block_4_2:
+      label: '4. riadok, druhá štvrtinka'
+    block_4_3:
+      label: '4. riadok, tretia štvrtinka'
+    block_4_4:
+      label: '4. riadok, štvrtá štvrtinka'
+    bottom:
+      label: 'Veľké dole'

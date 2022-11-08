@@ -1,0 +1,8 @@
+name: 'PostBellum Helpers'
+type: module
+description: 'Some specific PostBellum functionality'
+core_version_requirement: ^9
+package: 'PostBellum'
+dependencies:
+  - commerce_shipping
+  - block

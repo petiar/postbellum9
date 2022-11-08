@@ -1,0 +1,19 @@
+{
+    "name": "drupal/trustpay",
+    "type": "drupal-module",
+    "description": "Payment gateway integration for Trustpay.sk service",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0+",
+    "homepage": "https://www.drupal.org/project/commerce_trustpay",
+    "authors": [
+        {
+            "name": "Peter Lachky",
+            "homepage": "https://www.drupal.org/u/petiar",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/commerce_trustpay",
+        "source": "http://cgit.drupalcode.org/commerce_trustpay"
+    }
+}

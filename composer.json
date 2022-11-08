@@ -1,0 +1,135 @@
+{
+    "name": "drupal/recommended-project",
+    "description": "Project template for Drupal 9 projects with a relocated document root",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.9",
+        "dompdf/dompdf": "^0.8.3",
+        "drupal/admin_toolbar": "^2.0",
+        "drupal/adminimal_theme": "^1.5",
+        "drupal/blazy": "^2.1",
+        "drupal/bootstrap": "^3.17",
+        "drupal/color_field": "^2.2",
+        "drupal/commerce": "^2.31",
+        "drupal/commerce_agree_terms": "1.x-dev",
+        "drupal/commerce_invoice": "^2.0@beta",
+        "drupal/commerce_shipping": "^2.0@beta",
+        "drupal/commerce_shipping_weight_tariff": "^2.0@alpha",
+        "drupal/config_ignore": "^2.3",
+        "drupal/console": "^1.0.2",
+        "drupal/core": "^9",
+        "drupal/core-composer-scaffold": "^9.4",
+        "drupal/core-project-message": "^9.4",
+        "drupal/core-recommended": "^9.4",
+        "drupal/devel": "^4.0",
+        "drupal/eu_cookie_compliance": "^1.5",
+        "drupal/image_widget_crop": "^2.2",
+        "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/menu_link_attributes": "^1.1",
+        "drupal/metatag": "^1.8",
+        "drupal/page_manager": "^4.0@beta",
+        "drupal/panels": "^4.6",
+        "drupal/pathauto": "^1.4",
+        "drupal/rules": "^3.0@alpha",
+        "drupal/s3fs": "^3.0@alpha",
+        "drupal/schema_metatag": "^1.4",
+        "drupal/search_api": "^1.12",
+        "drupal/smtp": "^1.0@beta",
+        "drupal/swiftmailer": "^2",
+        "drupal/trustpay": "^1.0@alpha",
+        "drupal/typed_data": "^1.0@beta",
+        "drupal/views_bootstrap": "^3.1",
+        "drush/drush": "^11.1",
+        "mikehaertl/phpwkhtmltopdf": "^2.4",
+        "tecnickcom/tcpdf": "~6",
+        "vlucas/phpdotenv": "^2.4",
+        "webflo/drupal-finder": "^1.0.0",
+        "webmozart/path-util": "^2.3",
+        "zaporylie/composer-drupal-optimizations": "^1.0"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "zaporylie/composer-drupal-optimizations": true,
+            "drupal/console-extend-plugin": true
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "web/profiles/custom/{$name}": [
+                "type:drupal-custom-profile"
+            ],
+            "web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        },
+        "drupal-core-project-message": {
+            "include-keys": [
+                "homepage",
+                "support"
+            ],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                         </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
+                "<bg=blue;fg=white>                                                         </>",
+                "",
+                "<bg=yellow;fg=black>Next steps</>:",
+                "  * Install the site: https://www.drupal.org/docs/8/install",
+                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+                "  * Get support: https://www.drupal.org/support",
+                "  * Get involved with the Drupal community:",
+                "      https://www.drupal.org/getting-involved",
+                "  * Remove the plugin that prints this message:",
+                "      composer remove drupal/core-project-message"
+            ]
+        }
+    }
+}

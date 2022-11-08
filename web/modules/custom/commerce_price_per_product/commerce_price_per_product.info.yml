@@ -1,0 +1,5 @@
+name: 'Commerce Price Per Product'
+type: module
+description: 'This module moves the price from product variations to product entity. Useful if you do not need different price per variations.'
+core: 8.x
+package: 'PostBellum'

@@ -1,0 +1,24 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      css/style.css: {}
+  js:
+    js/script.js: {}
+global-scripts:
+  version: 1.x
+  js:
+    js/script.js: {}
+slick:
+  version: 1.8.1
+  css:
+    theme:
+      https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css: {type: external}
+      https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css: {type: external}
+      css/slick.css: {}
+  js:
+    js/postbellum.js: {}
+    https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js: {type: external}
+  dependencies:
+    - core/jquery
+

@@ -1,0 +1,14 @@
+{
+  "name": "drupal/postbellum_helpers",
+  "type": "drupal-module",
+  "description": "Some specific PostBellum functionality",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/postbellum_helpers",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/postbellum_helpers",
+    "source": "http://cgit.drupalcode.org/postbellum_helpers"
+  },
+  "require": { }
+}

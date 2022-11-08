@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains commerce_trustpay.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function commerce_trustpay_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the commerce_trustpay module.
+    case 'help.page.commerce_trustpay':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Trustpay payment gateway for Drupal Commerce') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function commerce_trustpay_theme() {
+  return [
+    'commerce_trustpay' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * HMAC-SHA-256 (RFC 2104) code is used for checking the integrity of the data sent between TrustPay and Merchant.
+ *
+ * Sign creation flow:
+ * 1, A message is created as concatenation of parameter values in this specified order:
+ * Merchant redirect to TrustPay: AID, AMT, CUR, and REF
+ * TrustPay notification to Merchant: AID, TYP, AMT, CUR, REF, RES, TID, OID and TSS
+ * HMAC-SHA-256 code (32 bytes) is generated using a key obtained from TrustPay
+ * Then the code is converted to a string to be a hexadecimal representation of the code (64 upper chars).
+ * The key used for signing data is obtained by Merchant when the agreement with TrustPay is signed.
+ *
+ * @param string $key
+ *   Merchant secret Trustpay key.
+ * @param string $message
+ *   Parameter values in this specified order.
+ *
+ * @return string
+ *   Trustpay Signature.
+ */
+function commerce_trustpay_get_signature($key, $message) {
+  return strtoupper(hash_hmac('sha256', pack('A*', $message), pack('A*', $key)));
+}

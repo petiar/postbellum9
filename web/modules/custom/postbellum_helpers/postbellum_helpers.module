@@ -1,0 +1,71 @@
+<?php
+
+/**
+ * @file
+ * Contains postbellum_helpers.module.
+ */
+
+use Drupal\commerce_price\Price;
+use Drupal\commerce_product\Entity\ProductVariation;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function postbellum_helpers_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the postbellum_helpers module.
+    case 'help.page.postbellum_helpers':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Some specific PostBellum functionality') . '</p>';
+      return $output;
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function postbellum_helpers_theme() {
+  return [
+    'postbellum_helpers' => [
+      'render element' => 'children',
+    ],
+    'postbellum_cart' => [
+      'variables' => [
+        'cart_quantity' => NULL,
+      ]
+    ],
+    'product_block' => [
+      'variables' => [
+        'product' => NULL,
+        'product_view_style' => NULL,
+        'variable' => NULL,
+      ],
+      //'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function postbellum_helpers_entity_presave_disabled(Drupal\Core\Entity\EntityInterface $entity) {
+  $product_price = NULL;
+  if ($entity instanceof ProductVariation) {
+    $product = $entity->getProduct();
+    $variations = $product->getVariations();
+    foreach ($variations as $variation) {
+      if (!$product_price) {
+        $product_price = $variation->getPrice();
+      }
+      elseif ($variation->getPrice()->compareTo($product_price) === -1) {
+        $product_price = $variation->getPrice();
+      }
+    }
+    if ($product->hasField('field_price')) {
+      $product->set('field_price', $product_price);
+    }
+  }
+}

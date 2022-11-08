@@ -1,0 +1,14 @@
+{
+  "name": "drupal/commerce_simple_invoice",
+  "type": "drupal-module",
+  "description": "Custom module for simple invoice generation.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/commerce_simple_invoice",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/commerce_simple_invoice",
+    "source": "http://cgit.drupalcode.org/commerce_simple_invoice"
+  },
+  "require": { }
+}

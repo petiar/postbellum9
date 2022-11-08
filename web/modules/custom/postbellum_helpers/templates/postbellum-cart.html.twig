@@ -1,0 +1,3 @@
+{% if cart_quantity %}
+<p class="cart-link"><a href="{{ path('commerce_cart.page') }}"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;Košík&nbsp;({{ cart_quantity }})</a></p>
+{% endif %}

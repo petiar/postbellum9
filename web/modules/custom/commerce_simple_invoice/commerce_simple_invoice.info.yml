@@ -1,0 +1,7 @@
+name: 'Commerce Simple Invoice'
+type: module
+description: 'Custom module for simple invoice generation.'
+core_version_requirement: ^9
+package: 'Commerce'
+dependencies:
+  - commerce

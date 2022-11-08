@@ -1,0 +1,56 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('postbellum/slick') }}
+<article{{ attributes }}>
+  <div class="row">
+    <div class="col-md-6">
+      {{ product.field_images }}
+    </div>
+    <div class="col-md-6">
+      <h1 class="page-header">{{ product.title }}</h1>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          {{ product.variations }}
+        </div>
+        <div class="col-md-6 col-sm-12 align-right">
+          {{ product.variation_price }}
+        </div>
+      </div>
+      {{ product.body }}
+    </div>
+  </div>
+  {% if product.field_dlhy_popis.0 is not empty %}
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Informácie o produkte</h2>
+      {{ product.field_dlhy_popis }}
+    </div>
+  </div>
+  {% endif %}
+  <div class="row">
+    <div class="col-xs-12">
+      <blockquote>Nákupom v e-shope podporíte dokumentovanie, vzdelávanie a rozprávanie príbehov 20. storočia. Ďakujeme!
+      </blockquote>
+    </div>
+  </div>
+  {# product|without('variation_attributes') #}
+</article>

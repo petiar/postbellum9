@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * @file
+ * Contains commerce_simple_invoice.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function commerce_simple_invoice_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the commerce_simple_invoice module.
+    case 'help.page.commerce_simple_invoice':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom module for simple invoice generation.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function commerce_simple_invoice_theme() {
+  $theme = [
+    'commerce_simple_invoice' => [
+      'variables' => [
+        'order_entity' => NULL,
+        'billing_information' => NULL,
+        'shipping_information' => NULL,
+        'payment_method' => NULL,
+        'totals' => NULL,
+      ],
+    ],
+  ];
+
+  return $theme;
+}
+

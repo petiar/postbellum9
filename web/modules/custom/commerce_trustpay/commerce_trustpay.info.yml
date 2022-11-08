@@ -1,0 +1,8 @@
+name: 'Commerce Trustpay'
+type: module
+description: 'Trustpay payment gateway for Drupal Commerce'
+core_version_requirement: ^9
+package: 'Commerce'
+dependencies:
+  - commerce:commerce
+  - commerce:commerce_payment
