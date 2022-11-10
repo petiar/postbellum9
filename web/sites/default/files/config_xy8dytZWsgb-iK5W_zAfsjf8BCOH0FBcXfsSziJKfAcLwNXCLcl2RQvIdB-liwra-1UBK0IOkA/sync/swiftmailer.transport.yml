@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: 0dJfQivKgyEp-S8D6gSRTBbpRFApE3VkpltnPMBQ5OY
+langcode: sk
+transport: smtp
+smtp_host: smtp.gmail.com
+smtp_port: 587
+smtp_encryption: tls
+sendmail_path: /usr/sbin/sendmail
+sendmail_mode: bs
+smtp_credential_provider: swiftmailer
+smtp_credentials:
+  swiftmailer:
+    username: eshop@postbellum.sk
+    password: sciw2FLIS-krek8cish
+spool_directory: ''

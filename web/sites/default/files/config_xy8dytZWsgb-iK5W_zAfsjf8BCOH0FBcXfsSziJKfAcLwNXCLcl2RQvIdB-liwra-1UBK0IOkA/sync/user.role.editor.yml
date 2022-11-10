@@ -1,0 +1,79 @@
+uuid: b2df940b-89cc-49cf-8da8-8f64ef2251f6
+langcode: sk
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - node.type.article
+    - node.type.page
+    - taxonomy.vocabulary.categories
+    - taxonomy.vocabulary.tags
+  module:
+    - eu_cookie_compliance
+    - file
+    - filter
+    - layout_builder
+    - locale
+    - node
+    - page_manager
+    - panels
+    - panels_ipe
+    - path
+    - system
+    - taxonomy
+    - toolbar
+id: editor
+label: Editor
+weight: 4
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access files overview'
+  - 'access panels in-place editing'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'administer eu cookie compliance popup'
+  - 'administer menu'
+  - 'administer nodes'
+  - 'administer pages'
+  - 'administer panels styles'
+  - 'administer taxonomy'
+  - 'administer users'
+  - 'bypass node access'
+  - 'configure any layout'
+  - 'create and edit custom blocks'
+  - 'create article content'
+  - 'create page content'
+  - 'create terms in categories'
+  - 'create terms in tags'
+  - 'create url aliases'
+  - 'delete all revisions'
+  - 'delete any article content'
+  - 'delete any page content'
+  - 'delete article revisions'
+  - 'delete own article content'
+  - 'delete own page content'
+  - 'delete page revisions'
+  - 'delete terms in categories'
+  - 'delete terms in tags'
+  - 'edit any article content'
+  - 'edit any page content'
+  - 'edit own article content'
+  - 'edit own page content'
+  - 'edit terms in categories'
+  - 'edit terms in tags'
+  - 'revert all revisions'
+  - 'revert article revisions'
+  - 'revert page revisions'
+  - 'translate interface'
+  - 'use ipe with page manager'
+  - 'use panels locks'
+  - 'use text format basic_html'
+  - 'view all revisions'
+  - 'view article revisions'
+  - 'view own unpublished content'
+  - 'view page revisions'
+  - 'view the administration theme'

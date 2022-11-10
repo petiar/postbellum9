@@ -1,0 +1,7 @@
+uuid: c0c9f504-d537-44c7-9377-1f81e4dde527
+langcode: sk
+status: true
+dependencies: {  }
+id: velkost
+label: Veľkosť
+elementType: radios

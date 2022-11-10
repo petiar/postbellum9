@@ -1,0 +1,22 @@
+label: Profily
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Použiť
+          reset_button_label: Reset
+          exposed_sorts_label: 'Zoradiť podľa'
+          sort_asc_label: Vzostupne
+          sort_desc_label: Zostupne
+      arguments:
+        uid:
+          exception:
+            title: Všetko
+        type:
+          exception:
+            title: Všetko
+        status:
+          exception:
+            title: Všetko
+      title: Profily

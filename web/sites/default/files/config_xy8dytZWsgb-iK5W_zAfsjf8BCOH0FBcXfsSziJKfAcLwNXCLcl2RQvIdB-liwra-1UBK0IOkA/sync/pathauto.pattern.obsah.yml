@@ -1,0 +1,23 @@
+uuid: 4986c133-664e-4fe5-bf36-acb29fe21a54
+langcode: sk
+status: true
+dependencies:
+  module:
+    - node
+id: obsah
+label: Obsah
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  6bc41d8f-0c20-41eb-8462-5d248519e80c:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 6bc41d8f-0c20-41eb-8462-5d248519e80c
+    context_mapping:
+      node: node
+    bundles:
+      article: article
+      page: page
+selection_logic: and
+weight: -5
+relationships: {  }

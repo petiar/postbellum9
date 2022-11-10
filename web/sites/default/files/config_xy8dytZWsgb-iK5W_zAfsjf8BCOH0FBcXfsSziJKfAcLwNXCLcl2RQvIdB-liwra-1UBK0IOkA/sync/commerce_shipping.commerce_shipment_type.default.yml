@@ -1,0 +1,10 @@
+uuid: a554f510-05a3-4355-a0d8-d0b091ded9f8
+langcode: sk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: '-kHo7v74pJKVjJ6Nu_pM83E8Oc3PS8dnIksYpmt3fbY'
+id: default
+label: Master
+traits: {  }
+profileType: customer

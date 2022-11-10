@@ -1,0 +1,12 @@
+uuid: 538ffcc5-ab70-4fe7-8b75-6601d6f681f4
+langcode: sk
+status: true
+dependencies: {  }
+id: fyzicky_tovar
+label: 'Fyzický tovar'
+traits: {  }
+locked: false
+description: 'Tento tovar je fyzický, tzn. že sa dá doručiť poštou a nemá žiadne atribúty.'
+variationType: fyzicky_tovar
+multipleVariations: false
+injectVariationFields: true

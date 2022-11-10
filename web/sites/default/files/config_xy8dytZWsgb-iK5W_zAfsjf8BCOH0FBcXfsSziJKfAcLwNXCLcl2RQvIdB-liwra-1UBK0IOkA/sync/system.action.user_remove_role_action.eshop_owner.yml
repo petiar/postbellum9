@@ -1,0 +1,14 @@
+uuid: b77d0521-6b2f-49cf-bee7-8f011e8b71f4
+langcode: sk
+status: true
+dependencies:
+  config:
+    - user.role.eshop_owner
+  module:
+    - user
+id: user_remove_role_action.eshop_owner
+label: 'Odobrať rolu Eshop owner vybraným používateľom'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: eshop_owner

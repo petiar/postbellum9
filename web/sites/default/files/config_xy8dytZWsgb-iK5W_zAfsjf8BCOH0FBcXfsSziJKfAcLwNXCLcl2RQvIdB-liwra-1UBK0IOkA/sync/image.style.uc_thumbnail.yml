@@ -1,0 +1,17 @@
+uuid: 3a1fad58-bca0-42da-9c50-81e217ef8c04
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ngXKR6nMcADR6dWiUjOvcGw287fXLt8hAmP75_gTtco
+name: uc_thumbnail
+label: 'Product (thumbnail)'
+effects:
+  c6c0890c-4496-48cc-9205-5c3b4e8148aa:
+    uuid: c6c0890c-4496-48cc-9205-5c3b4e8148aa
+    id: image_scale
+    weight: 1
+    data:
+      width: 35
+      height: 35
+      upscale: false

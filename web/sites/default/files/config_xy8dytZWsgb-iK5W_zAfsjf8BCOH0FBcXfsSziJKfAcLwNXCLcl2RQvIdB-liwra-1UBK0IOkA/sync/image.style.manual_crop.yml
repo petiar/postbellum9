@@ -1,0 +1,17 @@
+uuid: 62b6ec24-2b76-466a-900d-7c239b64abb1
+langcode: sk
+status: true
+dependencies:
+  config:
+    - crop.type.rectangle
+  module:
+    - crop
+name: manual_crop
+label: 'Manual crop - Rectangle'
+effects:
+  cd3a13d1-0c46-460d-8ca6-f78740f785b8:
+    uuid: cd3a13d1-0c46-460d-8ca6-f78740f785b8
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: rectangle

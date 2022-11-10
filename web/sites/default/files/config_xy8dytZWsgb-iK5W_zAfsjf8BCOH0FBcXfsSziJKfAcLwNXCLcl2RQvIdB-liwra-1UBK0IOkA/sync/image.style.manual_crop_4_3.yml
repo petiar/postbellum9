@@ -1,0 +1,17 @@
+uuid: 11668d7a-b7e1-4396-bb17-0e64f02fb430
+langcode: sk
+status: true
+dependencies:
+  config:
+    - crop.type.4_3
+  module:
+    - crop
+name: manual_crop_4_3
+label: 'Manual crop - 4:3'
+effects:
+  67a1ea1f-fdab-45c6-9d90-8039258f2194:
+    uuid: 67a1ea1f-fdab-45c6-9d90-8039258f2194
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: '4_3'

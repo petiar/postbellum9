@@ -1,0 +1,11 @@
+uuid: dcad9f86-6d23-4582-b8ee-4976cc8bb951
+langcode: sk
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.simple
+id: commerce_product.simple
+target_entity_type_id: commerce_product
+target_bundle: simple
+default_langcode: site_default
+language_alterable: false

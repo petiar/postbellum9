@@ -1,0 +1,22 @@
+uuid: f7639f0b-2eeb-4a18-a0bd-713b76d6fa19
+langcode: sk
+status: true
+dependencies:
+  theme:
+    - postbellum
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: postbellum_local_tasks
+theme: postbellum
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Záložky
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,0 +1,13 @@
+uuid: 474810b7-e1f8-4ea4-90a8-17443c5de221
+langcode: sk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: AeW1SEDgb1OTQACAWGhzvMknMYAJlcZu0jljfeU3oso
+name: Článok
+type: article
+description: 'Použite <em>články</em> pre časovo obmedzený obsah ako sú novinky, tlačové správy či blogové príspevky.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

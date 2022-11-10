@@ -1,0 +1,17 @@
+uuid: 63bd6476-d04a-4bc1-a305-e6bb62de1cd0
+langcode: sk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: cSO6cGSomwCBHXRD0CEXT2N-VRzyJXZCOmH7UZdolxc
+id: default
+label: Faktúra
+traits: {  }
+numberPattern: invoice_default
+logo: null
+dueDays: null
+paymentTerms: ''
+footerText: ''
+workflow: invoice_default
+sendConfirmation: null
+confirmationBcc: null

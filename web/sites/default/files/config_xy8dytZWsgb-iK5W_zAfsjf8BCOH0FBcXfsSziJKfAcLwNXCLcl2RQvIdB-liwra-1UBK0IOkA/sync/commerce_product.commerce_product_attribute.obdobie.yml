@@ -1,0 +1,7 @@
+uuid: 53037fc5-8d60-4de8-b58c-3423a99b4dc0
+langcode: sk
+status: true
+dependencies: {  }
+id: obdobie
+label: Obdobie
+elementType: commerce_product_rendered_attribute

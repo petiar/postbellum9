@@ -1,0 +1,81 @@
+_core:
+  default_config_hash: 9RpVluEdsYtiE1Ity_X-P_3WmflzyJFit3v3u5k_w8c
+langcode: sk
+uuid: fe2e5e59-01ac-4ae6-aefb-99ddb0bf2211
+popup_enabled: true
+popup_clicking_confirmation: false
+popup_scrolling_confirmation: false
+eu_only: null
+eu_only_js: null
+popup_position: false
+fixed_top_position: true
+popup_info:
+  value: '<h3>Pri prezeraní eshopu ukladáme vo vašom počítači tzv. <em>cookies</em>.</h3><p>Sú to malé súbory, ktoré nám pomáhajú zvyšovať váš komfort pri nakupovaní v našom eshope.</p>'
+  format: restricted_html
+mobile_popup_info:
+  value: ''
+  format: restricted_html
+popup_info_template: new
+popup_agree_button_message: 'V poriadku, súhlasím.'
+popup_more_info_button_message: null
+mobile_breakpoint: 768
+popup_agreed_enabled: false
+popup_hide_agreed: false
+disagree_button_label: 'Nie, ďakujem.'
+popup_agreed:
+  value: '<h2>Thank you for accepting cookies</h2><p>You can now hide this message or find out more about cookies.</p>'
+  format: restricted_html
+popup_find_more_button_message: 'Viac informácií'
+popup_hide_button_message: Schovať
+popup_link: '<front>'
+popup_link_new_window: true
+popup_height: null
+popup_width: ''
+popup_delay: 1000
+show_more_info: null
+popup_bg_hex: ''
+popup_text_hex: ''
+domain: ''
+domains_option: 1
+domains_list: ''
+exclude_paths: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*\r\n/node/*/*\r\n/user/*/*"
+exclude_admin_theme: false
+cookie_session: 0
+set_cookie_session_zero_on_disagree: 0
+cookie_lifetime: 100
+use_mobile_message: false
+use_bare_css: true
+disagree_do_not_show_popup: false
+reload_page: false
+reload_options: 0
+reload_routes_list: ''
+cookie_name: ''
+exclude_uid_1: false
+better_support_for_screen_readers: false
+method: opt_in
+disabled_javascripts: ''
+automatic_cookies_removal: true
+allowed_cookies: ''
+consent_storage_method: do_not_store
+withdraw_message:
+  value: '<h3>Na našej stránke používame cookies, aby sa pohodlne používala.</h3><p>Dali ste nám súhlas s ich používaním.</p>'
+  format: restricted_html
+withdraw_tab_button_label: 'Nastavenia súkromia'
+withdraw_action_button_label: 'Odvolať súhlas'
+withdraw_enabled: false
+withdraw_button_on_info_popup: false
+save_preferences_button_label: 'Save preferences'
+accept_all_categories_button_label: 'Accept all cookies'
+enable_save_preferences_button: true
+domain_all_sites: false
+settings_tab_enabled: false
+containing_element: body
+cookie_policy_version: 1.0.0
+cookie_value_disagreed: '0'
+cookie_value_agreed_show_thank_you: '1'
+cookie_value_agreed: '2'
+accessibility_focus: false
+close_button_action: close_banner
+reject_button_label: ''
+reject_button_enabled: false
+close_button_enabled: false

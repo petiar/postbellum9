@@ -1,0 +1,25 @@
+uuid: 51c77c7f-b635-4e67-846d-3dd2b214cce2
+langcode: sk
+status: true
+dependencies:
+  config:
+    - system.menu.co-robime
+  module:
+    - system
+  theme:
+    - postbellum
+id: corobime
+theme: postbellum
+region: footer_3
+weight: -8
+provider: null
+plugin: 'system_menu_block:co-robime'
+settings:
+  id: 'system_menu_block:co-robime'
+  label: 'Čo robíme'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+langcode: sk
+uuid: 1081c7a9-9fda-4beb-9a97-687563cee7e0
+name: 'PostBellum Eshop'
+mail: eshop@postbellum.sk
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /home
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: sk
+mail_notification: ''

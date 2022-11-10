@@ -1,0 +1,11 @@
+uuid: 26cb8090-c6c1-419b-89d3-ce3656c80c69
+langcode: sk
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.oblecenie
+id: commerce_product_variation.oblecenie
+target_entity_type_id: commerce_product_variation
+target_bundle: oblecenie
+default_langcode: site_default
+language_alterable: false

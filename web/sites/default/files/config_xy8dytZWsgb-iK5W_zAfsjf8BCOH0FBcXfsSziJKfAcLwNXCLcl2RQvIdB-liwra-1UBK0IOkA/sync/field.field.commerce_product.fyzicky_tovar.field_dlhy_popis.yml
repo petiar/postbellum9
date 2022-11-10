@@ -1,0 +1,21 @@
+uuid: 3cb1a8dd-9b9f-4589-b41a-f718d4429c6f
+langcode: sk
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.fyzicky_tovar
+    - field.storage.commerce_product.field_dlhy_popis
+  module:
+    - text
+id: commerce_product.fyzicky_tovar.field_dlhy_popis
+field_name: field_dlhy_popis
+entity_type: commerce_product
+bundle: fyzicky_tovar
+label: 'Dlhý popis'
+description: 'Ak je to vhodné, použite toto pole pre vyčerpávajúci, neobmedzený popis produktu. Zobrazí sa na stránke produktu úplne naspodu.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,14 @@
+uuid: 45e92afe-bb29-4865-a333-e927303c8c1d
+langcode: sk
+status: true
+dependencies:
+  module:
+    - commerce_order
+id: objednavka
+label: Objednávka
+type: 'canonical_entities:commerce_order'
+pattern: 'objednavka/[commerce_order:order_id]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

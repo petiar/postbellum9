@@ -1,0 +1,77 @@
+schemas:
+  bootstrap: 8000
+  postbellum: 8000
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'http://postbellum.lndo.site:8000/themes/contrib/bootstrap/favicon.ico'
+  use_default: 1
+features:
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+  node_user_picture: 1
+logo:
+  path: themes/custom/postbellum/assets/logo.png
+  url: ''
+  use_default: 0
+table_responsive: '-1'
+table: ''
+cdn_theme: yeti
+welcome_message: null
+shipping_quotes:
+  -
+    title: 'Doporučený list SK do 500gr'
+    weight_from:
+      number: '1'
+      unit: g
+    weight_to:
+      number: '500'
+      unit: g
+    price:
+      number: '2.00'
+      currency_code: EUR
+  -
+    title: 'Doporučený list SK 501-1000gr'
+    weight_from:
+      number: '501'
+      unit: g
+    weight_to:
+      number: '1000'
+      unit: g
+    price:
+      number: '3.00'
+      currency_code: EUR
+  -
+    title: 'Balík SK 1001-5000gr'
+    weight_from:
+      number: '1001'
+      unit: g
+    weight_to:
+      number: '5000'
+      unit: kg
+    price:
+      number: '4.50'
+      currency_code: EUR
+  -
+    title: Predplatné
+    weight_from:
+      number: '0'
+      unit: kg
+    weight_to:
+      number: '0'
+      unit: kg
+    price:
+      number: '0'
+      currency_code: EUR
+  -
+    title: 'Balík SK veľký 5-10kg'
+    weight_from:
+      number: '5001'
+      unit: g
+    weight_to:
+      number: '10000'
+      unit: g
+    price:
+      number: '5.50'
+      currency_code: EUR

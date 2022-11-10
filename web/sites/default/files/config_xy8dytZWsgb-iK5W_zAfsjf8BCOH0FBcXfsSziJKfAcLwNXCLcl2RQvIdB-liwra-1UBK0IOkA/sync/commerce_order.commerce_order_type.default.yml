@@ -1,0 +1,33 @@
+uuid: 7b3e58f6-4d13-46ce-ad2e-a86a4278708e
+langcode: sk
+status: true
+dependencies:
+  module:
+    - commerce_cart
+    - commerce_checkout
+    - commerce_invoice
+    - commerce_shipping
+third_party_settings:
+  commerce_shipping:
+    shipment_type: default
+  commerce_cart:
+    cart_block_view: commerce_cart_block
+    cart_form_view: commerce_cart_form
+    cart_expiration: {  }
+  commerce_invoice:
+    invoice_type: default
+    order_placed_generation: false
+  commerce_checkout:
+    checkout_flow: shipping
+_core:
+  default_config_hash: pGvuJjaRPhhEY9oSM5EGsAtKWgGNSA-0aq4RIvd4BBE
+id: default
+label: Master
+traits: {  }
+locked: false
+workflow: order_fulfillment
+numberPattern: order_default
+refresh_mode: customer
+refresh_frequency: 300
+sendReceipt: true
+receiptBcc: ''

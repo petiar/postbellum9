@@ -1,0 +1,13 @@
+uuid: 806fd190-3574-4c82-86d6-272ef506eb5a
+langcode: sk
+status: true
+dependencies: {  }
+id: order_default
+label: Default
+targetEntityType: commerce_order
+plugin: infinite
+configuration:
+  pattern: '[commerce_order:placed:date:custom:Y][pattern:number]'
+  initial_number: 1
+  padding: 4
+  per_store_sequence: true

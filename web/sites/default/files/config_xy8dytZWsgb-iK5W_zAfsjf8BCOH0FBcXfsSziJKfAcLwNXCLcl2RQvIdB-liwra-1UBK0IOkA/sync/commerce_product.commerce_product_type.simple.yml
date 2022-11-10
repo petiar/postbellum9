@@ -1,0 +1,12 @@
+uuid: 4fe54e25-ca15-4d98-9cb5-aa508019509c
+langcode: sk
+status: true
+dependencies: {  }
+id: simple
+label: Simple
+traits: {  }
+locked: false
+description: ''
+variationType: oblecenie
+multipleVariations: false
+injectVariationFields: true

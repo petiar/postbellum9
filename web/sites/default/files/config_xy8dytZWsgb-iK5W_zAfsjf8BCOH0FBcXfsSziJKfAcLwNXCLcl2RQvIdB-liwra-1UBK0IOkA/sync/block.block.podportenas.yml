@@ -1,0 +1,25 @@
+uuid: ef46e342-6e77-4f14-9f3e-21864ae401ae
+langcode: sk
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ab6f7124-1fe5-4a0d-aeca-8fab0abad586'
+  module:
+    - block_content
+  theme:
+    - postbellum
+id: podportenas
+theme: postbellum
+region: footer_4
+weight: 0
+provider: null
+plugin: 'block_content:ab6f7124-1fe5-4a0d-aeca-8fab0abad586'
+settings:
+  id: 'block_content:ab6f7124-1fe5-4a0d-aeca-8fab0abad586'
+  label: 'Podporte nás'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

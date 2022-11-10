@@ -1,0 +1,14 @@
+uuid: dc867f35-fecb-48ca-97a4-c1b972e6ce03
+langcode: en
+status: true
+dependencies: {  }
+id: shipping
+label: Shipping
+events:
+  -
+    event_name: 'rules_entity_insert:commerce_shipment'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule

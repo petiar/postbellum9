@@ -1,0 +1,15 @@
+uuid: 66f1e8b5-327b-4979-ace0-9e63e033e260
+langcode: sk
+status: true
+dependencies: {  }
+name: gallery
+label: Gallery
+effects:
+  c50d575e-02f7-4870-a1cc-92044aae6624:
+    uuid: c50d575e-02f7-4870-a1cc-92044aae6624
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 400
+      upscale: false

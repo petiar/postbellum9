@@ -1,0 +1,19 @@
+uuid: 5665ea75-1a71-447c-ac0d-cd84ec88c901
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_store.commerce_store_type.online
+    - field.storage.commerce_store.field_dic
+id: commerce_store.online.field_dic
+field_name: field_dic
+entity_type: commerce_store
+bundle: online
+label: DIČ
+description: 'Tu zadajte DIČ spoločnosti.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

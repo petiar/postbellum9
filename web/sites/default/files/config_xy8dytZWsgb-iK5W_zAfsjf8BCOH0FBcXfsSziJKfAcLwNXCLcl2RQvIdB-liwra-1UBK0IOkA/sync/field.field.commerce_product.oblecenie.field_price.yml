@@ -1,0 +1,23 @@
+uuid: 729a739f-ac55-4551-a1c1-0dbec58c7bef
+langcode: sk
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.oblecenie
+    - field.storage.commerce_product.field_price
+  module:
+    - commerce_price
+id: commerce_product.oblecenie.field_price
+field_name: field_price
+entity_type: commerce_product
+bundle: oblecenie
+label: Cena
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_currencies:
+    - EUR
+field_type: commerce_price

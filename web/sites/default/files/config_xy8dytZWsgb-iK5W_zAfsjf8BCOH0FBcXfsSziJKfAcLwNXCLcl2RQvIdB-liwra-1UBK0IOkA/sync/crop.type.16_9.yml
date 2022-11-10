@@ -1,0 +1,12 @@
+uuid: d304a7fe-71ac-4405-88c2-27066231f106
+langcode: sk
+status: true
+dependencies: {  }
+label: '16:9'
+id: '16_9'
+description: 'Tento crop oreže obrázok na pomer strán 16:9.'
+aspect_ratio: '16:9'
+soft_limit_width: 720
+soft_limit_height: 405
+hard_limit_width: null
+hard_limit_height: null

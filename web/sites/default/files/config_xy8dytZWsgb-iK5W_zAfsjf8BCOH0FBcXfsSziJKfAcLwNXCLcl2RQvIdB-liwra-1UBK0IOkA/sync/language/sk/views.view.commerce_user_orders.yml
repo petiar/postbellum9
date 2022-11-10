@@ -1,0 +1,45 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Použiť
+          reset_button_label: Reset
+          exposed_sorts_label: 'Zoradiť podľa'
+          sort_asc_label: Vzostupne
+          sort_desc_label: Zostupne
+      pager:
+        options:
+          tags:
+            previous: '‹ Predchádzajúci'
+            next: Ďalej
+            first: '« Prvý'
+            last: Koniec
+          expose:
+            items_per_page_label: 'Položiek na stránku'
+            items_per_page_options_all_label: '- Všetko -'
+            offset_label: 'Zobraziť od'
+      fields:
+        order_id:
+          label: ID
+        order_number:
+          label: 'Číslo objednávky'
+        placed:
+          label: Dátum
+        total_price__number:
+          label: Celkom
+        state:
+          label: Stav
+      title: Objednávky
+      empty:
+        area:
+          content:
+            value: 'Zatiaľ ste u nás nevytvorili žiadnu objednávku.'
+      arguments:
+        uid:
+          exception:
+            title: Všetko
+  order_page:
+    display_options:
+      menu:
+        title: Objednávky

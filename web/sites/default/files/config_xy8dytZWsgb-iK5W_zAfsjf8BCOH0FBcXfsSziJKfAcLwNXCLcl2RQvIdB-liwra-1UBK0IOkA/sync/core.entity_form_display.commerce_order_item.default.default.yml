@@ -1,0 +1,47 @@
+uuid: a7fe99be-4db4-41ef-9e93-7e35b61431db
+langcode: sk
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_item_type.default
+  module:
+    - commerce_order
+  enforced:
+    module:
+      - commerce_product
+_core:
+  default_config_hash: AI9120ApX7uexCUMTuO3RgE5bWu8175i_bNlPMRXe7M
+id: commerce_order_item.default.default
+targetEntityType: commerce_order_item
+bundle: default
+mode: default
+content:
+  purchased_entity:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  quantity:
+    type: commerce_quantity
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+      step: '1'
+    third_party_settings: {  }
+  unit_price:
+    type: commerce_unit_price
+    weight: 2
+    region: content
+    settings:
+      require_confirmation: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

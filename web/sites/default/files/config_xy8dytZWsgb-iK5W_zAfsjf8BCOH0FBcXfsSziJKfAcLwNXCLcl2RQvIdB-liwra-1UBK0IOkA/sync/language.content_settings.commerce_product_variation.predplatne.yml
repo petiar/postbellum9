@@ -1,0 +1,11 @@
+uuid: 4c0db1f7-e87a-4cf9-ab04-0c2658760720
+langcode: sk
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.predplatne
+id: commerce_product_variation.predplatne
+target_entity_type_id: commerce_product_variation
+target_bundle: predplatne
+default_langcode: site_default
+language_alterable: false

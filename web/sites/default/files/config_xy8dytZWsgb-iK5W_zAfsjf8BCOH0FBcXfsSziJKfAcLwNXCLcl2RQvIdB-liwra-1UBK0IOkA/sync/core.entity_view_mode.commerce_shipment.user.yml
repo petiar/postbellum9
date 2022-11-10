@@ -1,0 +1,12 @@
+uuid: 28a68328-b4c7-4c82-b2a7-6f7f4f53784b
+langcode: sk
+status: true
+dependencies:
+  module:
+    - commerce_shipping
+_core:
+  default_config_hash: G40vv9Xuc6Jt1V5H0UcORDW-EUbERkckHwBYkH7mG_Y
+id: commerce_shipment.user
+label: Používateľ
+targetEntityType: commerce_shipment
+cache: true

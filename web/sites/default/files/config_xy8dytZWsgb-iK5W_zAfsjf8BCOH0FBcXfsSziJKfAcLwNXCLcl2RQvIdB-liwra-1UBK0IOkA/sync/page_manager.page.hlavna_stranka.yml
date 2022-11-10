@@ -1,0 +1,12 @@
+uuid: 02403444-d728-4022-bec0-d69efdeab8e8
+langcode: sk
+status: true
+dependencies: {  }
+id: hlavna_stranka
+label: 'Hlavná stránka'
+description: ''
+use_admin_theme: false
+path: /home
+access_logic: and
+access_conditions: {  }
+parameters: {  }

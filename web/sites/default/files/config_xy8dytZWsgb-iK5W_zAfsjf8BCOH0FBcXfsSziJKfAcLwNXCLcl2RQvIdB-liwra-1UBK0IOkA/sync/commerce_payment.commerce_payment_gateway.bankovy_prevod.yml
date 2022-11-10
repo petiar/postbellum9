@@ -1,0 +1,19 @@
+uuid: 1355b09b-d706-404c-8ce7-123afb55c4ec
+langcode: sk
+status: true
+dependencies: {  }
+id: bankovy_prevod
+label: 'Bankový prevod'
+weight: null
+plugin: manual
+configuration:
+  display_label: 'Bankový prevod'
+  mode: n/a
+  payment_method_types:
+    - credit_card
+  collect_billing_information: true
+  instructions:
+    value: "<p>Prosím, zaplaťte sumu <strong>[commerce_order:total_price]</strong> na účet <b>SK12 0200 0000 0029 3529 9756</b> v našej banke. Ako variabilný symbol uveďte, prosím, číslo vašej objednávky, teda&nbsp;<strong>[commerce_order:order_number]</strong>.</p>\r\n\r\n<p><i>Vďaka vašej podpore dokážeme ešte viac dokumentovať, vzdelávať a rozprávať o príbehoch 20. storočia.</i></p>\r\n"
+    format: full_html
+conditions: {  }
+conditionOperator: AND

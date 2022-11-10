@@ -1,0 +1,22 @@
+uuid: 441f06fd-7072-4982-8196-66128479da13
+langcode: sk
+status: true
+dependencies:
+  theme:
+    - eleven
+_core:
+  default_config_hash: NZ0eVbrURmr4LiojnHLJuzXYlN3wD2h6Lxu777G--WQ
+id: tabs
+theme: eleven
+region: navigation
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Tabs Primary'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

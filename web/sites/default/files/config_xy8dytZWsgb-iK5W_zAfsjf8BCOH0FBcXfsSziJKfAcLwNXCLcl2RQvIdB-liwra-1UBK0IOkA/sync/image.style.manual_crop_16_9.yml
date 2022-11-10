@@ -1,0 +1,17 @@
+uuid: 01d75bf4-30cb-4f3f-a42b-bfdf3b132026
+langcode: sk
+status: true
+dependencies:
+  config:
+    - crop.type.16_9
+  module:
+    - crop
+name: manual_crop_16_9
+label: 'Manual crop - 16:9'
+effects:
+  edd98a6d-7f83-4737-8290-a6b971273167:
+    uuid: edd98a6d-7f83-4737-8290-a6b971273167
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: '16_9'

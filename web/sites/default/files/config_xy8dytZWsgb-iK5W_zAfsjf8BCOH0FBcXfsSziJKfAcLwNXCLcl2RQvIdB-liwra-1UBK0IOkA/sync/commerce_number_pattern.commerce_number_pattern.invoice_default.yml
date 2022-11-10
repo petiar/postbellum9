@@ -1,0 +1,18 @@
+uuid: ad1e4afd-47ce-484f-9e7b-5ce9f57167c3
+langcode: sk
+status: true
+dependencies:
+  enforced:
+    module:
+      - commerce_invoice
+_core:
+  default_config_hash: oRC53aHkQSiEJO5Gl51TP4BhOuNwPim57sTmc3OSWfo
+id: invoice_default
+label: Faktúra
+targetEntityType: commerce_invoice
+plugin: infinite
+configuration:
+  pattern: '[pattern:number]'
+  initial_number: 1
+  padding: 0
+  per_store_sequence: true

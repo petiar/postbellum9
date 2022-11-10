@@ -1,0 +1,22 @@
+uuid: cd544e64-341f-4393-8d0d-261719543867
+langcode: sk
+status: true
+dependencies: {  }
+id: commerce_product
+label: Produkt
+tags:
+  title: '[commerce_product:title]'
+  description: '[commerce_product:body:value]'
+  abstract: '[commerce_product:body:summary]'
+  og_type: product
+  og_image: '[commerce_product:field_main_image:manual_crop_facebook:url]'
+  og_url: '[current-page:url]'
+  og_description: '[commerce_product:body]'
+  og_site_name: '[site:name]'
+  og_title: '[current-page:title]'
+  product_price_amount: '[commerce_product:variations:0:entity:price:value]'
+  product_price_currency: EUR
+  schema_product_image: 'a:4:{s:5:"@type";s:11:"ImageObject";s:3:"url";s:46:"[commerce_product:field_main_image:entity:url]";s:5:"width";s:41:"[commerce_product:field_main_image:width]";s:6:"height";s:42:"[commerce_product:field_main_image:height]";}'
+  schema_product_type: Product
+  schema_product_name: '[commerce_product:title]'
+  schema_product_description: '[commerce_product:body:value]'

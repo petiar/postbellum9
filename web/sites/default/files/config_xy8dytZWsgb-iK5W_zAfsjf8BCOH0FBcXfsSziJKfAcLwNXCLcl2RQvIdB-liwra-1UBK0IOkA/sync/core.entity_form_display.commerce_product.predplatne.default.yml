@@ -1,0 +1,149 @@
+uuid: 54efbad7-74fd-40fb-ba16-ddbf098a1d35
+langcode: sk
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.predplatne
+    - field.field.commerce_product.predplatne.body
+    - field.field.commerce_product.predplatne.field_dlhy_popis
+    - field.field.commerce_product.predplatne.field_images
+    - field.field.commerce_product.predplatne.field_kratky_nazov
+    - field.field.commerce_product.predplatne.field_main_image
+    - field.field.commerce_product.predplatne.field_slogan
+    - image.style.thumbnail
+  module:
+    - commerce
+    - image_widget_crop
+    - path
+    - text
+id: commerce_product.predplatne.default
+targetEntityType: commerce_product
+bundle: predplatne
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dlhy_popis:
+    type: text_textarea
+    weight: 92
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_images:
+    type: image_widget_crop
+    weight: 91
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - rectangle
+      crop_types_required:
+        - rectangle
+      warn_multiple_usages: true
+      show_crop_area: false
+      show_default_crop: true
+    third_party_settings: {  }
+  field_kratky_nazov:
+    type: string_textfield
+    weight: 94
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_main_image:
+    type: image_widget_crop
+    weight: 93
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - '4_3'
+        - facebook_image
+        - rectangle
+      crop_types_required:
+        - '4_3'
+        - facebook_image
+        - rectangle
+      warn_multiple_usages: true
+      show_crop_area: false
+      show_default_crop: true
+    third_party_settings: {  }
+  field_slogan:
+    type: string_textarea
+    weight: 95
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 90
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  stores:
+    type: commerce_entity_select
+    weight: -10
+    region: content
+    settings:
+      hide_single_entity: true
+      autocomplete_threshold: 7
+      autocomplete_size: 60
+      autocomplete_placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  variations: true

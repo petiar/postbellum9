@@ -1,0 +1,10 @@
+uuid: 765c23d0-f0b7-4056-9a2e-1028f5feb25e
+langcode: sk
+status: true
+dependencies:
+  module:
+    - commerce_shipping
+id: commerce_shipment.checkout
+label: Checkout
+targetEntityType: commerce_shipment
+cache: true

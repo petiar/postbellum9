@@ -1,0 +1,28 @@
+uuid: 17269fcf-1c08-49d4-89c5-d66b51d3fb97
+langcode: sk
+status: true
+dependencies:
+  module:
+    - comment
+    - commerce_checkout
+    - commerce_product
+    - contact
+    - eu_cookie_compliance
+    - media
+    - search
+    - system
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymný používateľ'
+weight: 0
+is_admin: false
+permissions:
+  - 'access checkout'
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'display eu cookie compliance popup'
+  - 'search content'
+  - 'view commerce_product'
+  - 'view media'

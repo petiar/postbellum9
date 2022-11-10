@@ -1,0 +1,16 @@
+uuid: bd6744c3-def2-4c5f-88ba-7d3a4670de73
+langcode: sk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Spätná väzba'
+recipients:
+  - eshop@postbellum.sk
+  - jana.hrdlickova@postbellum.sk
+  - petiar@gmail.com
+reply: ''
+weight: 0
+message: 'Vaša správa bola odoslaná. Ďakujeme!'
+redirect: ''

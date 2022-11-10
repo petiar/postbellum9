@@ -1,0 +1,43 @@
+uuid: f9feedb9-442c-4ead-9468-4f4870399aee
+langcode: sk
+status: true
+dependencies:
+  config:
+    - field.storage.profile.address
+    - profile.type.customer
+  module:
+    - address
+_core:
+  default_config_hash: 0lW9atu6EsqDPufp7ZJ4IVzmKSzeZv0vhbHwZ2fIh8k
+id: profile.customer.address
+field_name: address
+entity_type: profile
+bundle: customer
+label: Adresa
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    langcode: sk
+    country_code: SK
+    administrative_area: null
+    locality: ''
+    dependent_locality: null
+    postal_code: ''
+    sorting_code: null
+    address_line1: ''
+    address_line2: ''
+    organization: ''
+    given_name: ''
+    additional_name: null
+    family_name: ''
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    addressLine2:
+      override: hidden
+  fields: {  }
+field_type: address

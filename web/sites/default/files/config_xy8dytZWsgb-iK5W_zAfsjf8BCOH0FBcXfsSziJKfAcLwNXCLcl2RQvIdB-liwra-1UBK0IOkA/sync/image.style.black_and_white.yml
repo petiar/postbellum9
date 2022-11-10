@@ -1,0 +1,12 @@
+uuid: aa7c8fab-50dc-4db7-a20e-0549aa4c7c98
+langcode: sk
+status: true
+dependencies: {  }
+name: black_and_white
+label: 'Black and white'
+effects:
+  6452d802-c109-4321-8ee3-f50779d4c254:
+    uuid: 6452d802-c109-4321-8ee3-f50779d4c254
+    id: image_desaturate
+    weight: 1
+    data: {  }

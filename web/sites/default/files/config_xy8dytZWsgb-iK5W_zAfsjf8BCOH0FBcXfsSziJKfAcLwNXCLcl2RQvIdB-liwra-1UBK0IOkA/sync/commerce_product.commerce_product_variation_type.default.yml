@@ -1,0 +1,10 @@
+uuid: 11cef3ea-eaec-496c-8501-9523209a2cec
+langcode: sk
+status: true
+dependencies: {  }
+id: default
+label: Predvolený
+traits: {  }
+locked: false
+orderItemType: default
+generateTitle: true

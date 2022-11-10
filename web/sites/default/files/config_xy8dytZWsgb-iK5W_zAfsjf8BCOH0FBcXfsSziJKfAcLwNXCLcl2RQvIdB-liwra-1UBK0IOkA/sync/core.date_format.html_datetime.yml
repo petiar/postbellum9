@@ -1,0 +1,10 @@
+uuid: 85d6c6ee-46f9-4505-a424-92b81a7050e8
+langcode: sk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: jxfClwZIRXIdcvMrE--WkcZxDGUVoOIE3Sm2NRZlFuE
+id: html_datetime
+label: 'HTML dátum a čas'
+locked: true
+pattern: 'Y-m-d\TH:i:sO'

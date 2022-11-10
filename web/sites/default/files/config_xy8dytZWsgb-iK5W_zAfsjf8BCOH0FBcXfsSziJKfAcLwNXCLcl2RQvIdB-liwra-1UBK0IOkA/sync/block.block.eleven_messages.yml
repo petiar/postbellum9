@@ -1,0 +1,22 @@
+uuid: 78fdf78f-cca8-48c3-aa6e-7db6fa463997
+langcode: sk
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - eleven
+_core:
+  default_config_hash: siDqBFhXsX2pGCvU905Mck4aCRWW02aki5BEEbZ0XdM
+id: eleven_messages
+theme: eleven
+region: messages
+weight: -3
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

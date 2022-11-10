@@ -1,0 +1,19 @@
+uuid: 45b5038a-e67c-48f0-95b8-3443e4ff51dc
+langcode: sk
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.predplatne
+    - field.storage.commerce_product.field_kratky_nazov
+id: commerce_product.predplatne.field_kratky_nazov
+field_name: field_kratky_nazov
+entity_type: commerce_product
+bundle: predplatne
+label: 'Krátky názov'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

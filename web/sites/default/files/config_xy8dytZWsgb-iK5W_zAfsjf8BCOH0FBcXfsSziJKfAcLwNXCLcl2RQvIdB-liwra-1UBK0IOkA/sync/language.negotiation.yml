@@ -1,0 +1,13 @@
+_core:
+  default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM
+langcode: sk
+session:
+  parameter: language
+url:
+  source: path_prefix
+  prefixes:
+    sk: sk
+    '': null
+  domains:
+    sk: ''
+selected_langcode: site_default

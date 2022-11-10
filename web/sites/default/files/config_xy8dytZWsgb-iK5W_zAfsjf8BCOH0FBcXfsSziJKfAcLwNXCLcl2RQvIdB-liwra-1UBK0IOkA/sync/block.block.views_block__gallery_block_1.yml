@@ -1,0 +1,25 @@
+uuid: 193c1732-4120-483d-9fd9-016f8d92ef52
+langcode: sk
+status: true
+dependencies:
+  config:
+    - views.view.gallery
+  module:
+    - views
+  theme:
+    - postbellum
+id: views_block__gallery_block_1
+theme: postbellum
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:gallery-block_1'
+settings:
+  id: 'views_block:gallery-block_1'
+  label: Gallery
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: Gallery
+  items_per_page: '40'
+visibility: {  }

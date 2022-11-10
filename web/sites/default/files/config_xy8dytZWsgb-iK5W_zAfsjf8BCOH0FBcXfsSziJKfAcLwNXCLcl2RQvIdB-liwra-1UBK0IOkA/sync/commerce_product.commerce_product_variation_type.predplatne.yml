@@ -1,0 +1,10 @@
+uuid: 7b801570-0e33-4a42-9cf2-3a54998a42d6
+langcode: sk
+status: true
+dependencies: {  }
+id: predplatne
+label: Predplatné
+traits: {  }
+locked: false
+orderItemType: default
+generateTitle: true

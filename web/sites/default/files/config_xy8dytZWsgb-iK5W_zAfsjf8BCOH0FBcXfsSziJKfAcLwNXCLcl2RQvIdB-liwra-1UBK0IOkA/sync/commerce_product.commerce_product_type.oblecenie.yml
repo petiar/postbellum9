@@ -1,0 +1,12 @@
+uuid: 8a88eef7-ae62-4992-9efb-16686bc80ade
+langcode: sk
+status: true
+dependencies: {  }
+id: oblecenie
+label: Oblečenie
+traits: {  }
+locked: false
+description: 'Tento typ produktu má varianty veľkosť a pohlavie.'
+variationType: oblecenie
+multipleVariations: true
+injectVariationFields: true

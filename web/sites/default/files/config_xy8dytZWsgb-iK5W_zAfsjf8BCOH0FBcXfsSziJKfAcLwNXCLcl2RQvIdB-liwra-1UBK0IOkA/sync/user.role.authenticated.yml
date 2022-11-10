@@ -1,0 +1,43 @@
+uuid: 009b217e-8656-4a12-ab47-32e8cc970859
+langcode: sk
+status: true
+dependencies:
+  module:
+    - comment
+    - commerce_checkout
+    - commerce_order
+    - commerce_payment
+    - commerce_product
+    - contact
+    - eu_cookie_compliance
+    - media
+    - profile
+    - search
+    - shortcut
+    - system
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Prihlásený používateľ'
+weight: 1
+is_admin: false
+permissions:
+  - 'access checkout'
+  - 'access comments'
+  - 'access content'
+  - 'access profile overview'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'create customer profile'
+  - 'delete own customer profile'
+  - 'display eu cookie compliance popup'
+  - 'manage own commerce_payment_method'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'update own customer profile'
+  - 'view commerce_product'
+  - 'view media'
+  - 'view own commerce_order'
+  - 'view own customer profile'
+  - 'view own profile'

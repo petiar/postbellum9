@@ -1,0 +1,55 @@
+uuid: 153a4239-b32d-477f-adf7-75c0643ce08c
+langcode: sk
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.oblecenie
+    - field.field.commerce_product_variation.oblecenie.attribute_farba
+    - field.field.commerce_product_variation.oblecenie.attribute_velkost
+    - field.field.commerce_product_variation.oblecenie.field_sale_price
+    - field.field.commerce_product_variation.oblecenie.weight
+  module:
+    - commerce_price
+id: commerce_product_variation.oblecenie.default
+targetEntityType: commerce_product_variation
+bundle: oblecenie
+mode: default
+content:
+  field_sale_price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  list_price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  price:
+    type: commerce_price_default
+    label: hidden
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  attribute_farba: true
+  attribute_velkost: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  product_id: true
+  sku: true
+  title: true
+  weight: true

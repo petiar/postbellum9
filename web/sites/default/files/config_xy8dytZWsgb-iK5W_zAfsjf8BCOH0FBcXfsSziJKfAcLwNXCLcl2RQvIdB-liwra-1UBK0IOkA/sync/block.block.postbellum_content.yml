@@ -1,0 +1,22 @@
+uuid: 8ddb09b6-90cd-4eb4-a46f-d6d468e9db82
+langcode: sk
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - postbellum
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: postbellum_content
+theme: postbellum
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Hlavný obsah stránky'
+  label_display: '0'
+  provider: system
+visibility: {  }

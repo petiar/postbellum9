@@ -1,0 +1,12 @@
+uuid: 37fb1f41-1f90-42a6-9a66-e495d988c15b
+langcode: sk
+status: true
+dependencies: {  }
+id: predplatne
+label: Predplatné
+traits: {  }
+locked: false
+description: ''
+variationType: predplatne
+multipleVariations: true
+injectVariationFields: true

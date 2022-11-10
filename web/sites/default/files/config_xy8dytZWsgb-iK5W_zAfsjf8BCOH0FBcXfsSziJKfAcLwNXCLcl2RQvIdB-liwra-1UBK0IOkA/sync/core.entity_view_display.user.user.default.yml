@@ -1,0 +1,26 @@
+uuid: 23aec871-832c-4f90-a3a9-d05afca7544d
+langcode: sk
+status: true
+dependencies:
+  config:
+    - field.field.user.user.commerce_remote_id
+  module:
+    - user
+_core:
+  default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  member_for:
+    weight: 5
+    region: content
+hidden:
+  commerce_remote_id: true
+  customer_profiles: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  profile_customer: true

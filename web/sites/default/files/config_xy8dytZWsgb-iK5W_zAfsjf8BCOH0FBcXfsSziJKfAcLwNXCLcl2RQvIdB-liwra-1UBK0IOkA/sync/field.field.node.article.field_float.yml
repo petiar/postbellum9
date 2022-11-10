@@ -1,0 +1,23 @@
+uuid: b44d95e5-d01f-4513-8b98-9edac89b7299
+langcode: sk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_float
+    - node.type.article
+id: node.article.field_float
+field_name: field_float
+entity_type: node
+bundle: article
+label: Float
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

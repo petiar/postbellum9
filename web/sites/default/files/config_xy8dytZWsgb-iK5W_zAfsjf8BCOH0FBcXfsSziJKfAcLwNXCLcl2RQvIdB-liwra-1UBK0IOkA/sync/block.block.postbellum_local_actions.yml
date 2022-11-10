@@ -1,0 +1,20 @@
+uuid: 56913751-9485-4a7d-86fc-4738b15b9a12
+langcode: sk
+status: true
+dependencies:
+  theme:
+    - postbellum
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: postbellum_local_actions
+theme: postbellum
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,8 @@
+uuid: 05bf87be-414c-46a6-ad1b-eb7d32f524ac
+langcode: sk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: U5VlGjd_SfV0Qm_EfnaynOfc549cNscFAx48JfYoMRI
+id: default
+label: Master

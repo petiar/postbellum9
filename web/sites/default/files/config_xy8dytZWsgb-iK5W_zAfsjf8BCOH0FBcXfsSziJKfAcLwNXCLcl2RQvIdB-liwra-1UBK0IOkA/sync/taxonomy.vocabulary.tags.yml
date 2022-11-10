@@ -1,0 +1,10 @@
+uuid: c18a1045-1f52-438e-aeab-85ed0b05a1bb
+langcode: sk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lO5ziR5dVI1PpEeHZsSOfQ-Y7NWihSDKW8-MMf6uoms
+name: Značky
+vid: tags
+description: 'Použite značky na zoskupenie článkov do kategórií podľa podobných tém.'
+weight: 0

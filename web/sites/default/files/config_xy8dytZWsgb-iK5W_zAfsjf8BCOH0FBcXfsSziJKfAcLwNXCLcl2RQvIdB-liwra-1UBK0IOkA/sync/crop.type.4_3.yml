@@ -1,0 +1,12 @@
+uuid: 31ce775f-b1fe-4753-85f1-96c125cc76b8
+langcode: sk
+status: true
+dependencies: {  }
+label: '4:3'
+id: '4_3'
+description: 'Tento crop oreže obrázok na pomer strán 4:3.'
+aspect_ratio: '4:3'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

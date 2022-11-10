@@ -1,0 +1,17 @@
+uuid: b19262f1-dd34-4f8e-b84a-fb17f0a3f435
+langcode: sk
+status: true
+dependencies:
+  config:
+    - crop.type.facebook_image
+  module:
+    - crop
+name: manual_crop_facebook
+label: 'Manual crop - Facebook'
+effects:
+  d3736adf-41a2-4767-a791-062a47a2eb51:
+    uuid: d3736adf-41a2-4767-a791-062a47a2eb51
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: facebook_image

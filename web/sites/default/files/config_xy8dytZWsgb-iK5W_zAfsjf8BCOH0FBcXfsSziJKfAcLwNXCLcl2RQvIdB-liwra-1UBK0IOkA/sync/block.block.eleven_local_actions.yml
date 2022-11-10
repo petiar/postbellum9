@@ -1,0 +1,20 @@
+uuid: 30e93263-81c1-4049-a963-b8c77da62a4b
+langcode: sk
+status: true
+dependencies:
+  theme:
+    - eleven
+_core:
+  default_config_hash: B19tnPMjhwbl7w_DjtEMcfdMzVJsZA08b_c7T_o8S3I
+id: eleven_local_actions
+theme: eleven
+region: top_first
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,8 @@
+uuid: 8865a70f-39ce-4ec3-91cd-2ab7be92fa2e
+langcode: sk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: xlAQsf06ZIEPSNMVp97zTgfGd74jS-krJ5GnoiNw-Us
+id: default
+label: Default

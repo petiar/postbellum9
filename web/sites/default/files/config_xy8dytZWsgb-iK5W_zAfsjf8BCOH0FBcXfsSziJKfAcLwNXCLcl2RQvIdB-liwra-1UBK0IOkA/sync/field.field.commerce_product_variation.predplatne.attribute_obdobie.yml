@@ -1,0 +1,24 @@
+uuid: 7c2d5f60-f625-4c9b-9b02-44adad3385de
+langcode: sk
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_attribute.obdobie
+    - commerce_product.commerce_product_variation_type.predplatne
+    - field.storage.commerce_product_variation.attribute_obdobie
+id: commerce_product_variation.predplatne.attribute_obdobie
+field_name: attribute_obdobie
+entity_type: commerce_product_variation
+bundle: predplatne
+label: Obdobie
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product_attribute_value'
+  handler_settings:
+    target_bundles:
+      - obdobie
+field_type: entity_reference

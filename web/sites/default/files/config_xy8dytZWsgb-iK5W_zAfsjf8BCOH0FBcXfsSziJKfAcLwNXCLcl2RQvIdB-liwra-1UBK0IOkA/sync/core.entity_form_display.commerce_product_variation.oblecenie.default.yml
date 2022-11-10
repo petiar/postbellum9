@@ -1,0 +1,81 @@
+uuid: 6a3635a1-0f23-4a99-9e1d-c4cf0848668f
+langcode: sk
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.oblecenie
+    - field.field.commerce_product_variation.oblecenie.attribute_farba
+    - field.field.commerce_product_variation.oblecenie.attribute_velkost
+    - field.field.commerce_product_variation.oblecenie.field_sale_price
+    - field.field.commerce_product_variation.oblecenie.weight
+  module:
+    - commerce_price
+    - physical
+id: commerce_product_variation.oblecenie.default
+targetEntityType: commerce_product_variation
+bundle: oblecenie
+mode: default
+content:
+  attribute_farba:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  attribute_velkost:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_sale_price:
+    type: commerce_price_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 5
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  list_price:
+    type: commerce_list_price
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  price:
+    type: commerce_price_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sku:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  weight:
+    type: physical_measurement_default
+    weight: 8
+    region: content
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

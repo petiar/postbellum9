@@ -1,0 +1,20 @@
+uuid: a62ac175-8d3f-4f73-9208-1c73aa2299a5
+langcode: sk
+status: true
+dependencies:
+  module:
+    - postbellum_helpers
+  theme:
+    - postbellum
+id: pbcartblock
+theme: postbellum
+region: navigation_collapsible
+weight: -7
+provider: null
+plugin: postbellum_cart_block
+settings:
+  id: postbellum_cart_block
+  label: 'PB Cart Block'
+  label_display: '0'
+  provider: postbellum_helpers
+visibility: {  }

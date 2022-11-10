@@ -1,0 +1,12 @@
+uuid: ace925e1-c204-48e0-9467-8d67f84aad79
+langcode: sk
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: flXhTcp55yLcyy7ZLOhPGKGZobZQJdkAFVWV3LseiuI
+id: user.register
+label: Registrovať
+targetEntityType: user
+cache: true

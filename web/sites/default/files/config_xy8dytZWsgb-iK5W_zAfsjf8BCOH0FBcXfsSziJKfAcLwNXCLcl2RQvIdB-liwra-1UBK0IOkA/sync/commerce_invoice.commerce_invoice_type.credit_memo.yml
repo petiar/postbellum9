@@ -1,0 +1,15 @@
+uuid: 1ffc4bc8-b881-4230-9893-9b8e1a86f75f
+langcode: sk
+status: true
+dependencies: {  }
+id: credit_memo
+label: 'Credit memo'
+traits: {  }
+numberPattern: invoice_credit_memo
+logo: null
+dueDays: null
+paymentTerms: ''
+footerText: ''
+workflow: invoice_default
+sendConfirmation: false
+confirmationBcc: ''

@@ -1,0 +1,19 @@
+uuid: 03ccd94f-d029-4a2e-9a95-03269f6c79dd
+langcode: sk
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.predplatne
+    - field.storage.commerce_product.field_slogan
+id: commerce_product.predplatne.field_slogan
+field_name: field_slogan
+entity_type: commerce_product
+bundle: predplatne
+label: Slogan
+description: 'Krátka charakteristika produktu (2-4 vety). Používa sa na miestach, kde nie je možné zobraziť kompletný popis, napríklad zoznamy produktov.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

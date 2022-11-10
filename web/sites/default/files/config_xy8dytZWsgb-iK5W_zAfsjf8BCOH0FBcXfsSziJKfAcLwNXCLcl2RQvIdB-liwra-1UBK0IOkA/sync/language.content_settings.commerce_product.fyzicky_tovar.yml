@@ -1,0 +1,11 @@
+uuid: 0c27348a-0b4d-4f35-b0d2-74eb0dcde7f6
+langcode: sk
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.fyzicky_tovar
+id: commerce_product.fyzicky_tovar
+target_entity_type_id: commerce_product
+target_bundle: fyzicky_tovar
+default_langcode: site_default
+language_alterable: false

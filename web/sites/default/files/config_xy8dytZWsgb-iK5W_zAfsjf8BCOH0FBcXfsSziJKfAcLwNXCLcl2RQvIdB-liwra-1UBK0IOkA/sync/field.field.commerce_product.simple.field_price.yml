@@ -1,0 +1,22 @@
+uuid: b96fab31-55ab-499c-9995-1a5e9504ee4b
+langcode: sk
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.simple
+    - field.storage.commerce_product.field_price
+  module:
+    - commerce_price
+id: commerce_product.simple.field_price
+field_name: field_price
+entity_type: commerce_product
+bundle: simple
+label: Cena
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_currencies: {  }
+field_type: commerce_price

@@ -1,0 +1,48 @@
+uuid: 4faba5e3-a268-48d5-a103-582d70a5a76c
+langcode: sk
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.fyzicky_tovar
+    - field.field.commerce_product_variation.fyzicky_tovar.weight
+  module:
+    - commerce_order
+    - commerce_price
+id: commerce_product_variation.fyzicky_tovar.default
+targetEntityType: commerce_product_variation
+bundle: fyzicky_tovar
+mode: default
+content:
+  list_price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  price:
+    type: commerce_price_calculated
+    label: hidden
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+      adjustment_types:
+        promotion: promotion
+        fee: '0'
+        tax: '0'
+        shipping: '0'
+        shipping_promotion: '0'
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  product_id: true
+  sku: true
+  title: true
+  weight: true

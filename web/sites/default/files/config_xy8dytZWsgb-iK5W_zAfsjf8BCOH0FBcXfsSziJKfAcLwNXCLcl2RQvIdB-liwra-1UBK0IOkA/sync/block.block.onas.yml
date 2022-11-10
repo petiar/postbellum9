@@ -1,0 +1,25 @@
+uuid: 707dc5a9-e72d-4bc6-93d9-c975a077c4d9
+langcode: sk
+status: true
+dependencies:
+  config:
+    - system.menu.o-nas
+  module:
+    - system
+  theme:
+    - postbellum
+id: onas
+theme: postbellum
+region: footer_2
+weight: -8
+provider: null
+plugin: 'system_menu_block:o-nas'
+settings:
+  id: 'system_menu_block:o-nas'
+  label: E-shop
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

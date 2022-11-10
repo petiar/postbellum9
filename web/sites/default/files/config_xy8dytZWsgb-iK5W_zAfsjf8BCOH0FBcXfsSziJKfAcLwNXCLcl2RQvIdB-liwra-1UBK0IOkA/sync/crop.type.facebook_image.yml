@@ -1,0 +1,12 @@
+uuid: 82599b80-6d6b-4aa3-b902-63cf5a8c4122
+langcode: sk
+status: true
+dependencies: {  }
+label: 'Facebook Image'
+id: facebook_image
+description: 'Toto je crop pre obrázky na Facebook.'
+aspect_ratio: '2:1'
+soft_limit_width: 1200
+soft_limit_height: 630
+hard_limit_width: null
+hard_limit_height: null

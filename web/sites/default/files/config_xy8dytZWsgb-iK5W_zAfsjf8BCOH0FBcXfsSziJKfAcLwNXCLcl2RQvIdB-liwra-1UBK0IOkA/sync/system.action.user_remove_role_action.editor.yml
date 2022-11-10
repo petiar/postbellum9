@@ -1,0 +1,14 @@
+uuid: d5cee6e7-caa2-4ed7-8fab-fab04d9147e1
+langcode: sk
+status: true
+dependencies:
+  config:
+    - user.role.editor
+  module:
+    - user
+id: user_remove_role_action.editor
+label: 'Odobrať rolu Editor vybraným používateľom'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: editor

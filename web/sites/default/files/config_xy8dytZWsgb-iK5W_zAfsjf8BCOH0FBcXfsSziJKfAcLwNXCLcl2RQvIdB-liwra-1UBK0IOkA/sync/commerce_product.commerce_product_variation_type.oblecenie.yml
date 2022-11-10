@@ -1,0 +1,11 @@
+uuid: 4dc51054-5f41-4d60-83f6-d23e36bf5d4d
+langcode: sk
+status: true
+dependencies: {  }
+id: oblecenie
+label: Oblečenie
+traits:
+  - purchasable_entity_shippable
+locked: false
+orderItemType: default
+generateTitle: true

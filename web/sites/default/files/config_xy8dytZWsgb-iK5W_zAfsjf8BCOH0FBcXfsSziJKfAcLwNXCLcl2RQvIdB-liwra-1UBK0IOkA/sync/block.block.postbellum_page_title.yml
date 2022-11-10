@@ -1,0 +1,20 @@
+uuid: 79c1ecbc-b828-4cd4-afa8-39a564df4192
+langcode: sk
+status: true
+dependencies:
+  theme:
+    - postbellum
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: postbellum_page_title
+theme: postbellum
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Názov stránky'
+  label_display: '0'
+  provider: core
+visibility: {  }

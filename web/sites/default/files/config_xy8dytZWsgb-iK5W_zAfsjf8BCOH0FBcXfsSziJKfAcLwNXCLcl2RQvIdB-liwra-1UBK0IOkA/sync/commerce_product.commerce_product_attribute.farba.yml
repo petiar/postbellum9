@@ -1,0 +1,7 @@
+uuid: 31e98e96-b088-4d9c-9abd-8aaa82c1cc7e
+langcode: sk
+status: true
+dependencies: {  }
+id: farba
+label: Farba
+elementType: commerce_product_rendered_attribute

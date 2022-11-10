@@ -1,0 +1,30 @@
+uuid: f0124355-05f3-4535-999d-7d10b39b05e8
+langcode: sk
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - file
+    - image
+id: commerce_product.field_main_image
+field_name: field_main_image
+entity_type: commerce_product
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: s3
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,14 @@
+uuid: 9f41337d-1f34-4630-a595-0b0b0d763534
+langcode: sk
+status: true
+dependencies:
+  config:
+    - user.role.eshop_owner
+  module:
+    - user
+id: user_add_role_action.eshop_owner
+label: 'Pridať rolu Eshop owner vybraným používateľom'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: eshop_owner

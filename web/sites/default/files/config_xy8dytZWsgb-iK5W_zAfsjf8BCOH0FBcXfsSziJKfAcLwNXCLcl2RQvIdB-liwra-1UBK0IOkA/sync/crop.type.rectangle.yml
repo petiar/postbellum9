@@ -1,0 +1,12 @@
+uuid: 24c7461f-6337-4b30-aa4c-b4cbacf73917
+langcode: sk
+status: true
+dependencies: {  }
+label: Rectangle
+id: rectangle
+description: 'Toto je crop type ak chceme obrázok v tvare štvorca.'
+aspect_ratio: '1:1'
+soft_limit_width: 200
+soft_limit_height: 200
+hard_limit_width: 100
+hard_limit_height: 100

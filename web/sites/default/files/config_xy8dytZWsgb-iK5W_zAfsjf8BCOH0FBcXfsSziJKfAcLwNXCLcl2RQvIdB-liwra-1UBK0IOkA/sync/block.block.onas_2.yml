@@ -1,0 +1,25 @@
+uuid: 2ca7f5fe-ed7e-40ff-9f92-a5770aa77c5a
+langcode: sk
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:06bf0075-de4f-4613-b9a5-6ec353e0ca12'
+  module:
+    - block_content
+  theme:
+    - postbellum
+id: onas_2
+theme: postbellum
+region: footer_1
+weight: 0
+provider: null
+plugin: 'block_content:06bf0075-de4f-4613-b9a5-6ec353e0ca12'
+settings:
+  id: 'block_content:06bf0075-de4f-4613-b9a5-6ec353e0ca12'
+  label: Kontakt
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

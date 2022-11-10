@@ -1,0 +1,15 @@
+uuid: 7008b20a-a63c-4e79-b293-eae900021e34
+langcode: sk
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 97tvtzGOa8_flb22CzSjgtm_YkiGMHvEBO-6q2K9V_U
+id: node_search
+label: Obsah
+path: node
+weight: -10
+plugin: node_search
+configuration:
+  rankings: {  }

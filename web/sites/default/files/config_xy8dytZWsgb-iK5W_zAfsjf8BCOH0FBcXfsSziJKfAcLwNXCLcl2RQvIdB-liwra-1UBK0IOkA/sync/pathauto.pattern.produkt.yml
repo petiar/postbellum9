@@ -1,0 +1,16 @@
+uuid: 8d563de4-7778-4778-a456-0cf9205527e7
+langcode: sk
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: produkt
+label: Produkt
+type: 'canonical_entities:commerce_product'
+pattern: '[commerce_product:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: -10
+relationships:
+  'commerce_product:langcode:language':
+    label: Language

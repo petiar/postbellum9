@@ -1,0 +1,10 @@
+entity_type_groups:
+  commerce_product:
+    fyzicky_tovar:
+      open_graph_products: open_graph_products
+      open_graph: open_graph
+      schema_product: schema_product
+    oblecenie:
+      open_graph_products: open_graph_products
+      open_graph: open_graph
+      schema_product: schema_product

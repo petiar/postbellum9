@@ -1,0 +1,13 @@
+uuid: 4a5c13af-e516-48c9-9092-1f7f1c657a61
+langcode: sk
+status: true
+dependencies: {  }
+id: commerce_product_variation
+label: 'Product variation'
+tags:
+  og_type: product
+  og_url: '[current-page:url]'
+  og_site_name: 'PostBellum E-shop'
+  og_title: '[current-page:title]'
+  product_price_amount: '[commerce_product_variation:price]'
+  product_price_currency: EUR

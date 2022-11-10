@@ -1,0 +1,104 @@
+uuid: 04e204f5-ee56-4d18-82bb-ce9af7ace51d
+langcode: sk
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.fyzicky_tovar
+    - core.entity_view_mode.commerce_product.views
+    - field.field.commerce_product.fyzicky_tovar.body
+    - field.field.commerce_product.fyzicky_tovar.field_dlhy_popis
+    - field.field.commerce_product.fyzicky_tovar.field_images
+    - field.field.commerce_product.fyzicky_tovar.field_kratky_nazov
+    - field.field.commerce_product.fyzicky_tovar.field_main_image
+    - field.field.commerce_product.fyzicky_tovar.field_slogan
+    - image.style.manual_crop_4_3
+  module:
+    - blazy
+    - commerce_product
+    - text
+id: commerce_product.fyzicky_tovar.views
+targetEntityType: commerce_product
+bundle: fyzicky_tovar
+mode: views
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_kratky_nazov:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_main_image:
+    type: blazy
+    label: hidden
+    settings:
+      caption: {  }
+      layout: ''
+      view_mode: ''
+      cache: 0
+      skin: ''
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      responsive_image_style: ''
+      box_style: ''
+      image_style: manual_crop_4_3
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      breakpoints: {  }
+      current_view_mode: ''
+      fx: ''
+      icon: ''
+      sizes: ''
+      grid_header: ''
+      _uri: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_slogan:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    label: hidden
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_dlhy_popis: true
+  field_images: true
+  langcode: true
+  stores: true
+  uid: true
