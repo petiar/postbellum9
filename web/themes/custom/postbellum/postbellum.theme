@@ -100,7 +100,7 @@ function postbellum_preprocess_commerce_order_receipt(&$variables) {
       else {
         /** @var \Drupal\Core\Messenger\MessengerInterface $messenger */
         $messenger = \Drupal::service('messenger');
-        $messenger->addError(t('There are no payments in this order.'));
+        // $messenger->addError(t('There are no payments in this order.'));
       }
       // Set payment payment instruction data on template variable:
 
