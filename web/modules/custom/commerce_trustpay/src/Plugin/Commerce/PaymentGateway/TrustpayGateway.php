@@ -36,7 +36,7 @@ abstract class TrustpayGateway extends OffsitePaymentGatewayBase implements HasP
       ] + parent::defaultConfiguration();
   }
   public function buildPaymentInstructions(Order $order): array {
-    // TODO: Implement buildPaymentInstructions() method.
+    return [];
   }
 
   public function buildConfigurationForm(array $form, FormStateInterface $form_state): array {

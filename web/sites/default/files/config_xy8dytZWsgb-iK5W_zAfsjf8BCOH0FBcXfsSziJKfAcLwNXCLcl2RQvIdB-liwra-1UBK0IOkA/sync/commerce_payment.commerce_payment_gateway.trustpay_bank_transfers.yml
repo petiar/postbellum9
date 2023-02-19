@@ -9,14 +9,14 @@ label: 'Trustpay Bank Transfers'
 weight: null
 plugin: trustpay_bank_transfers_gateway
 configuration:
-  display_label: 'Trustpay Instant Bank Transfers Gateway'
+  display_label: 'Online bankový prevod cez Trustpay'
   mode: test
   payment_method_types:
     - credit_card
   collect_billing_information: true
   aid: '4107481517'
   secret: 1fnt6YsA9cNoUQTVcjEAh9S9rNlKnq0W
-  description: 'Toto je popis pre Trustpay Bank Transfers'
+  description: 'Online platba cez internetbanking vašej banky.'
   0: notify_catcher_url
   notify_catcher_url: 'https://postbellum.requestcatcher.com/test'
 conditions: {  }

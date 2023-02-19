@@ -26,11 +26,16 @@ function commerce_trustpay_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_theme().
  */
-function commerce_trustpay_theme() {
+function commerce_trustpay_theme($existing, $type, $theme, $path) {
   return [
     'commerce_trustpay' => [
       'render element' => 'children',
     ],
+    'commerce_trustpay_error' => [
+      'variables' => [
+        'description' => NULL,
+      ]
+    ]
   ];
 }
 
@@ -54,9 +59,5 @@ function commerce_trustpay_theme() {
  *   Trustpay Signature.
  */
 function commerce_trustpay_get_signature($key, $message) {
-  //print $message;
-  //print $key;
-  print strtoupper(hash_hmac('sha256', pack('A*', $message), pack('A*', $key)));
-  \Drupal::logger('trustpay')->debug('secret: ' . $key);
   return strtoupper(hash_hmac('sha256', pack('A*', $message), pack('A*', $key)));
 }

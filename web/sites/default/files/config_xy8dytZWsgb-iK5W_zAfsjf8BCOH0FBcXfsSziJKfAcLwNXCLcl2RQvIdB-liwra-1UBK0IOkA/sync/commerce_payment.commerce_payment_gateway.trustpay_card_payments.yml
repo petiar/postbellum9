@@ -9,16 +9,15 @@ label: 'Trustpay Card Payments'
 weight: null
 plugin: trustpay_card_gateway
 configuration:
-  display_label: 'Trustpay Card payments Gateway'
+  display_label: 'Platba kartou cez Trustpay'
   mode: test
   payment_method_types:
     - credit_card
   collect_billing_information: true
   aid: '4107481517'
   secret: 1fnt6YsA9cNoUQTVcjEAh9S9rNlKnq0W
-  order_valid_time: 168
-  interest_free_days_merchant: 0
-  description: ''
+  description: 'Platba kreditnou alebo debetnou kartou cez platobnú bránu Trustpay.'
+  0: notify_catcher_url
   notify_catcher_url: 'https://postbellum.requestcatcher.com/test'
 conditions: {  }
 conditionOperator: AND

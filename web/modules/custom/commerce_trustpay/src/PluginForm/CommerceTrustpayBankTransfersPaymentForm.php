@@ -44,9 +44,6 @@ class CommerceTrustpayBankTransfersPaymentForm extends PaymentOffsiteForm {
       '#type' => 'link',
       '#title' => $this->t('Cancel'),
       '#url' => Url::fromUri($form['#cancel_url']),
-      '#attributes' => [
-        'class' => ['show-popup']
-      ],
     ];
 
     // No need to call buildRedirectForm(), as we embed an iframe.

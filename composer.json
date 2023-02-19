@@ -27,7 +27,7 @@
         "drupal/commerce_invoice": "^2.0@RC",
         "drupal/commerce_shipping": "^2.0@beta",
         "drupal/commerce_shipping_weight_tariff": "^2.0@alpha",
-        "drupal/config_ignore": "^2.3",
+        "drupal/config_ignore": "^3.0@beta",
         "drupal/console": "^1.0.2",
         "drupal/core": "^9",
         "drupal/core-composer-scaffold": "^9.4",
