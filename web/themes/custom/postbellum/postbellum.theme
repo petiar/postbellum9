@@ -87,7 +87,7 @@ function postbellum_preprocess_commerce_order_receipt(&$variables) {
         'label' => $payment->getPaymentGateway()->label(),
       ];
     }
-dpm($variables['payments']);
+
     // Get payment instruction using the order
     $variables['payment_instructions'] = $payment_gateway_plugin->buildPaymentInstructions($order);
 

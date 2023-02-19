@@ -47,6 +47,7 @@ class TrustpayBankTransfersGateway extends TrustpayGateway {
   public function onNotify(Request $request) {
     // Get query parameters from request.
     $params = $request->query->all();
+    \Drupal::logger('commerce_trustpay')->debug('Notify request: %params', ['%params' => json_encode($params)]);
 
     $signature_array = [
       'account_id' => $params['AccountId'],
@@ -63,8 +64,6 @@ class TrustpayBankTransfersGateway extends TrustpayGateway {
     ];
 
     $this->validatePayment($signature_array, $params['Signature']);
-
-    \Drupal::logger('commerce_trustpay')->debug('Notify request: %params', ['%params' => json_encode($params)]);
   }
 
   public function getGatewayUrl() {
