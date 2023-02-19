@@ -1,0 +1,23 @@
+uuid: c0a4554f-3a33-48f8-99e5-4367fd0fb458
+langcode: sk
+status: true
+dependencies:
+  module:
+    - commerce_trustpay
+id: trustpay_bank_transfers
+label: 'Trustpay Bank Transfers'
+weight: null
+plugin: trustpay_bank_transfers_gateway
+configuration:
+  display_label: 'Trustpay Instant Bank Transfers Gateway'
+  mode: test
+  payment_method_types:
+    - credit_card
+  collect_billing_information: true
+  aid: '4107481517'
+  secret: 1fnt6YsA9cNoUQTVcjEAh9S9rNlKnq0W
+  description: 'Toto je popis pre Trustpay Bank Transfers'
+  0: notify_catcher_url
+  notify_catcher_url: 'https://postbellum.requestcatcher.com/test'
+conditions: {  }
+conditionOperator: AND

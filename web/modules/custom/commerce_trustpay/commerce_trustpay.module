@@ -54,5 +54,9 @@ function commerce_trustpay_theme() {
  *   Trustpay Signature.
  */
 function commerce_trustpay_get_signature($key, $message) {
+  //print $message;
+  //print $key;
+  print strtoupper(hash_hmac('sha256', pack('A*', $message), pack('A*', $key)));
+  \Drupal::logger('trustpay')->debug('secret: ' . $key);
   return strtoupper(hash_hmac('sha256', pack('A*', $message), pack('A*', $key)));
 }
