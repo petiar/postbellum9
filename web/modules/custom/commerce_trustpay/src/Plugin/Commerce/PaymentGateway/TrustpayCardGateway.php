@@ -25,7 +25,7 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class TrustpayCardGateway extends TrustpayGateway {
 
-  public function buildPaymentInstructions (Order $order): array {
+  public function buildPaymentInstructionDeleted (Order $order): array {
     $trustpayRequest = new TrustpayRequestGenerator($order);
     return [
       '#type' => 'inline_template',

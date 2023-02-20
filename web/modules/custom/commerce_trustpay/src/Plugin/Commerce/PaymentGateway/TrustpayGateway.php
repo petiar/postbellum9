@@ -16,7 +16,7 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
 
-abstract class TrustpayGateway extends OffsitePaymentGatewayBase implements HasPaymentInstructionsFromOrderInterface, SupportsNotificationsInterface, TrustpayGatewayInterface {
+abstract class TrustpayGateway extends OffsitePaymentGatewayBase implements SupportsNotificationsInterface, TrustpayGatewayInterface {
   const TRUSTPAY_RESPONSE_SUCCESS = 0;
   const TRUSTPAY_RESPONSE_PENDING = 1;
   const TRUSTPAY_RESPONSE_ANNOUNCED = 2;

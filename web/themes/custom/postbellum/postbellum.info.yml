@@ -2,7 +2,7 @@ name: PostBellum
 type: theme
 description: 'Custom theme for the PostBellum eshop.'
 package: PostBellum
-core_version_requirement: ^9
+core_version_requirement: ^9 || ^10
 libraries:
   - postbellum/global-styling
 
