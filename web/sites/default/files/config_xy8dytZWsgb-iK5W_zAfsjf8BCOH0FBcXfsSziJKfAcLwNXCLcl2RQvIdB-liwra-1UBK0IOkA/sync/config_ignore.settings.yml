@@ -3,3 +3,4 @@ _core:
 langcode: sk
 ignored_config_entities:
   - 'page_manager.page_variant.*'
+  - 'commerce_payment.commerce_payment_gateway.*'
