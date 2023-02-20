@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Labrada:wght@300;400;700&family=Montserrat:wght@300;400;700&display=swap');
+
 body {
   padding:0px;
   margin:0px;
   background-image: url('../assets/merch-holubica-stvorec.png');
   background-size: cover;
   background-position: center center;
+  font-family: Montserrat;
 }
 
 h1, h2, h3 {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Labrada, Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
 }
 
 #header {
