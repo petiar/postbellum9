@@ -17,6 +17,7 @@ regions:
   content: Content
   sidebar_first: Primary
   sidebar_second: Secondary
+  quote: Quote
   footer: Footer
   footer_1: Footer 1
   footer_2: Footer 2
