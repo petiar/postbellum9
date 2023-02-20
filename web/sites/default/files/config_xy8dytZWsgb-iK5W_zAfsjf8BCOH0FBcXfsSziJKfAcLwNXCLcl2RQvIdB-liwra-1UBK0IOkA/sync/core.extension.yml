@@ -17,6 +17,7 @@ module:
   color_field: 0
   comment: 0
   commerce: 0
+  commerce_abandoned_carts: 0
   commerce_agree_terms: 0
   commerce_cart: 0
   commerce_checkout: 0

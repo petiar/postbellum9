@@ -2,10 +2,10 @@ schemas:
   bootstrap: 8000
   postbellum: 8000
 favicon:
-  mimetype: image/vnd.microsoft.icon
-  path: ''
+  mimetype: image/png
+  path: 'public://favicon.png'
   url: 'http://postbellum.lndo.site:8000/themes/contrib/bootstrap/favicon.ico'
-  use_default: 1
+  use_default: 0
 features:
   comment_user_picture: 1
   comment_user_verification: 1
@@ -75,3 +75,23 @@ shipping_quotes:
     price:
       number: '5.50'
       currency_code: EUR
+region_wells:
+  header: ''
+  navigation: ''
+  navigation_collapsible: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: well
+  footer: ''
+  footer_1: ''
+  footer_2: ''
+  footer_3: ''
+  footer_4: ''
+cdn_cache_ttl_versions: '604800'
+cdn_cache_ttl_themes: '604800'
+cdn_cache_ttl_assets: '0'
+cdn_cache_ttl_library: '0'
+apply: Použiť
+reset_http_request_cache: ''

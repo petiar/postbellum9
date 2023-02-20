@@ -16,10 +16,34 @@ a {
   color: $primary-color;
 }
 
+blockquote {
+  border: none;
+}
+
+table {
+  font-size: 1em;
+}
+
+th, td {
+  border: none;
+}
+
+.cart-form {
+  td.views-field-purchased-entity {
+    font-weight: bold;
+  }
+}
+
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:focus
 {
+  background-color: $primary-hover-color;
+}
+
+.btn:focus,
+.btn:focus-visible {
+  outline: none;
   background-color: $primary-hover-color;
 }
 
@@ -129,7 +153,6 @@ article {
 .form-item-purchased-entity-0-attributes-attribute-velkost,
 .form-item-purchased-entity-0-attributes-attribute-obdobie {
   border: 2px solid #222;
-  border-radius: 5px;
   font-weight: bold;
 
   &.radio {
@@ -394,4 +417,14 @@ footer {
 /* ugly hack for the checkboxes */
 .radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
   margin-left: 0px;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: $primary-color;
+}
+
+::selection {
+  color: white;
+  background: $primary-color;
 }

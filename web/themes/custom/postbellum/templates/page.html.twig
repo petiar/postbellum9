@@ -169,11 +169,12 @@
   </div>
 {% endblock %}
 
+{% if not is_front %}
   {% block quote %}
-<div class="quote container" style="
-
-">Nákupom v e-shope podporíte dokumentovanie, vzdelávanie a rozprávanie príbehov 20. storočia. Ďakujeme!</div>
+<div class="quote container">Nákupom v e-shope podporíte dokumentovanie, vzdelávanie a rozprávanie príbehov 20. storočia. Ďakujeme!</div>
   {% endblock %}
+{% endif %}
+
   {% block footer %}
     <footer id="footer" class="site-footer">
       <div class="site-info container">

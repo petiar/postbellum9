@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: SL0DVGS65GjL2me-T8MZHI8NLWQRNugv2VnE86qDvPc
+langcode: sk
+timeout: 1440
+history_limit: 21600
+batch_limit: 25
+from_email: ''
+from_name: 'Nákupný košík na Postbellum'
+subject: 'V košíku na vás čaká zabudnutý tovar'
+customer_service_phone_number: ''
+bcc_active: false
+bcc_email: ''
+testmode: true
+testmode_email: petiar@gmail.com
