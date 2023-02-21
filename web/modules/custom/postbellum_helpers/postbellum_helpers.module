@@ -24,6 +24,14 @@ function postbellum_helpers_help($route_name, RouteMatchInterface $route_match) 
   }
 }
 
+function postbellum_helpers_preprocess_page_title(&$variables) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  $step = \Drupal::routeMatch()->getParameter('step');
+  if ($route_name . $step === 'commerce_checkout.formcomplete') {
+    $variables['title'] = 'Ďakujeme za nákup!';
+  }
+}
+
 /**
  * Implements hook_theme().
  */

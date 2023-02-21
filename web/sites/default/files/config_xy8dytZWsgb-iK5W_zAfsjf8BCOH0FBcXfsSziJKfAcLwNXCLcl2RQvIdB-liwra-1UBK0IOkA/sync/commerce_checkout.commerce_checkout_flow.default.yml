@@ -21,6 +21,7 @@ configuration:
       weight: 0
       allow_guest_checkout: true
       allow_registration: false
+      registration_form_mode: register
     contact_information:
       step: order_information
       weight: 1
@@ -28,14 +29,14 @@ configuration:
     payment_information:
       step: order_information
       weight: 2
+    review:
+      step: review
+      weight: 3
     shipping_information:
       step: review
       weight: 4
       auto_recalculate: true
       require_shipping_profile: true
-    review:
-      step: review
-      weight: 3
     agree_terms:
       step: review
       weight: 5
@@ -45,15 +46,13 @@ configuration:
       invalid_text: 'You must agree with the %terms before continuing'
       new_window: 1
     payment_process:
-      step: payment
-      weight: 6
+      step: complete
+      weight: 7
       capture: true
     completion_message:
       step: complete
       weight: 7
-      message:
-        value: "Your order number is [commerce_order:order_number].\r\nYou can view your order on your account page when logged in."
-        format: plain_text
+      capture: true
     completion_register:
       step: complete
       weight: 8

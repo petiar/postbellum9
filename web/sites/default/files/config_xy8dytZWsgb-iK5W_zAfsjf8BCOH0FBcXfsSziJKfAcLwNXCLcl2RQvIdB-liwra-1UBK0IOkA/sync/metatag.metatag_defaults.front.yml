@@ -8,4 +8,8 @@ id: front
 label: 'Front page'
 tags:
   canonical_url: '[site:url]'
+  description: 'Nákupom v e-shope podporíte dokumentovanie, vzdelávanie a rozprávanie príbehov 20. storočia. Ďakujeme!'
+  og_image: 'http://s3.eu-central-1.amazonaws.com/eshop.postbellum.sk/2022-02/PB%20c%CC%8Casopisy%202021%20copy.jpg'
+  og_site_name: 'Eshop Postbellum.sk'
   shortlink: '[site:url]'
+  title: 'Eshop Postbellum.sk'

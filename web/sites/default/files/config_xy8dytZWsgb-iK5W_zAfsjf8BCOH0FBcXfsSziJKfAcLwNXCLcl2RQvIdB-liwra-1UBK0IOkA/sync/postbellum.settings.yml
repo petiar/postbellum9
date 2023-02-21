@@ -4,7 +4,7 @@ schemas:
 favicon:
   mimetype: image/png
   path: 'public://favicon.png'
-  url: 'http://postbellum.lndo.site:8000/themes/contrib/bootstrap/favicon.ico'
+  url: /sites/default/files/favicon.png
   use_default: 0
 features:
   comment_user_picture: 1
@@ -12,7 +12,7 @@ features:
   favicon: 1
   node_user_picture: 1
 logo:
-  path: themes/custom/postbellum/assets/logo.png
+  path: themes/custom/postbellum/assets/pb_logo_oneline.png
   url: ''
   use_default: 0
 table_responsive: '-1'
@@ -84,6 +84,7 @@ region_wells:
   content: ''
   sidebar_first: ''
   sidebar_second: well
+  quote: ''
   footer: ''
   footer_1: ''
   footer_2: ''
