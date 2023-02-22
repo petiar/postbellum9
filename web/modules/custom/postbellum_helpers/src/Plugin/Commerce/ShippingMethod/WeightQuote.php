@@ -5,6 +5,7 @@ namespace Drupal\postbellum_helpers\Plugin\Commerce\ShippingMethod;
 
 
 use Drupal\commerce_price\Price;
+use Drupal\commerce_shipping\Annotation\CommerceShippingMethod;
 use Drupal\commerce_shipping\Entity\ShipmentInterface;
 use Drupal\commerce_shipping\PackageTypeManagerInterface;
 use Drupal\commerce_shipping\Plugin\Commerce\ShippingMethod\ShippingMethodBase;
@@ -91,9 +92,10 @@ class WeightQuote extends ShippingMethodBase {
           'shipping_method_id' => $this->parentEntity->id(),
           'service' => $this->services['weight_quote'],
           'amount' => $amount,
-          'description' => 'Description',
+          'description' => $this->t('Shipping based on the package weight, approx. @weight', [
+            '@weight' => floatval($order_weight->getNumber()) . $order_weight->getUnit()
+          ]),
         ]);
-        \Drupal::logger('petiar')->debug(print_r($rates, true));
       }
     }
     if (!$rates) {

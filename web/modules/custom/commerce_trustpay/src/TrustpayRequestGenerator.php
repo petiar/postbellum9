@@ -3,50 +3,40 @@
 namespace Drupal\commerce_trustpay;
 
 use Drupal\commerce_order\Entity\Order;
+use Drupal\commerce_payment\Entity\Payment;
+use Drupal\commerce_payment\Entity\PaymentGateway;
 use Drupal\commerce_payment\Plugin\Commerce\CheckoutPane\PaymentProcess;
 use Drupal\Core\Url;
 
 class TrustpayRequestGenerator {
   private $order;
-  private $returnUrl;
-  private $cancelUrl;
-  private $exceptionUrl;
-
-  public const TRUSTCARD_PAYMENT_REQUEST_URL = 'https://amapi.trustpay.eu/mapi5/Card/PayPopup';
-  public const TRUSTPAY_PAYMENT_REQUEST_URL = 'https://amapi.trustpay.eu/mapi5/wire/paypopup';
+  private $return_url;
+  private $cancel_url;
+  private $exception_url;
 
   public function __construct(Order $order) {
     $this->order = $order;
-    $this->returnUrl = Url::fromRoute('commerce_payment.checkout.return', [
+    $this->return_url = Url::fromRoute('commerce_payment.checkout.return', [
       'commerce_order' => $this->order->id(),
       'step' => 'payment',
     ], ['absolute' => TRUE])->toString();
-    $this->cancelUrl = Url::fromRoute('commerce_payment.checkout.cancel', [
+    $this->cancel_url = Url::fromRoute('commerce_payment.checkout.cancel', [
       'commerce_order' => $this->order->id(),
       'step' => 'payment',
     ], ['absolute' => TRUE])->toString();
   }
 
-  public function setReturnUrl($url) {
-    $this->returnUrl = $url;
-  }
+  /**
+   * @param \Drupal\commerce_payment\Entity\PaymentGateway $payment_gateway
+   *
+   * @return string
+   * @throws \Drupal\Core\TypedData\Exception\MissingDataException
+   */
+  public function generateRequestUrl(PaymentGateway $payment_gateway): string {
+    $payment_gateway_plugin = $payment_gateway->getPlugin();
 
-  public function setCancelUrl($url) {
-    $this->cancelUrl = $url;
-  }
-
-  public function setExceptionUrl($url) {
-    $this->exceptionUrl = $url;
-  }
-
-  public function generateRequestUrl($baseUrl) {
-    /** @var \Drupal\commerce_payment\Plugin\Commerce\PaymentGateway\OffsitePaymentGatewayInterface $payment_gateway_plugin */
-    $payment_gateway_plugin = \Drupal::entityTypeManager()
-      ->getStorage('commerce_payment_gateway')->loadByProperties([
-        'plugin' => 'trustpay_gateway',
-      ]);
-    $payment_gateway_plugin = reset($payment_gateway_plugin)->getPlugin();
-    $accountId = $payment_gateway_plugin->getConfiguration()['aid'];
+    $base_url = $payment_gateway_plugin->getGatewayUrl();
+    $account_id = $payment_gateway_plugin->getConfiguration()['aid'];
     $amount = number_format($this->order->getTotalPrice()->getNumber(), 2, '.', '');
     $billingProfile = $this->order->getBillingProfile()->get('address')->first()->getValue();
     $billingcity = $billingProfile['locality'];
@@ -59,26 +49,33 @@ class TrustpayRequestGenerator {
     $reference = $this->order->id();
     $paymentType = 0;
     $secretKey = $payment_gateway_plugin->getConfiguration()['secret'];
-    // Return, Cancel and Error urls.
-    $returnUrl = $this->returnUrl ?: '';
-    $cancelUrl = $this->cancelUrl ?: '';
-    $errorUrl =   Url::fromRoute('commerce_trustpay.error', [], ['absolute' => TRUE])->toString();
-    $notifyUrl = $payment_gateway_plugin->getNotifyUrl()->toString();
-    $description = urlencode($payment_gateway_plugin->getConfiguration()['description']);
 
-    if ($baseUrl == $this::TRUSTPAY_PAYMENT_REQUEST_URL) {
-      $sigData = sprintf("%d/%s/%s/%s/%d", $accountId, number_format($amount, 2, '.', ''), $currency, $reference, $paymentType);
-      $signature = commerce_trustpay_get_signature($secretKey, $sigData);
-      $url = sprintf(
-        "%s?AccountId=%d&Amount=%s&Currency=%s&Reference=%s&PaymentType=%d&Signature=%s&returnUrl=%s&cancelUrl=%s&errorUrl=%s&notifyUrl=%s&Description=%s",
-        $baseUrl, $accountId, number_format($amount, 2, '.', ''), $currency, urlencode($reference), $paymentType, $signature, $returnUrl, $cancelUrl, $errorUrl, $notifyUrl, $description);
+    // Return, Cancel and Error urls.
+    $returnUrl = urlencode($this->return_url ?: '');
+    $cancelUrl = urlencode($this->cancel_url ?: '');
+    $errorUrl = urlencode(Url::fromRoute('commerce_trustpay.error', [], ['absolute' => TRUE])->toString());
+    if ($payment_gateway_plugin->getConfiguration()['notify_catcher_url']) {
+      $notifyUrl = urlencode($payment_gateway_plugin->getConfiguration()['notify_catcher_url']);
     }
     else {
-      $sigData = sprintf("%d/%s/%s/%s/%d/%s/%s/%s/%s/%s/%s", $accountId, number_format($amount, 2, '.', ''), $currency, $reference, $paymentType, $billingcity, $billingcountry, $billingpostcode, $billingstreet, $cardholder, $email);
-      $signature = commerce_trustpay_get_signature($secretKey, $sigData);
-      $url = sprintf(
-        "%s?AccountId=%d&Amount=%s&Currency=%s&Reference=%s&PaymentType=%d&Signature=%s&BillingCity=%s&BillingCountry=%s&BillingPostcode=%s&BillingStreet=%s&CardHolder=%s&Email=%s&returnUrl=%s&cancelUrl=%s&errorUrl=%s&notifyUrl=%s&Description=%s",
-        $baseUrl, $accountId, number_format($amount, 2, '.', ''), $currency, urlencode($reference), $paymentType, $signature, $billingcity, $billingcountry, $billingpostcode, $billingstreet, $cardholder, $email, $returnUrl, $cancelUrl, $errorUrl, $notifyUrl, $description);
+      $notifyUrl = urlencode($payment_gateway_plugin->getNotifyUrl()->toString());
+    }
+    $description = urlencode($payment_gateway_plugin->getConfiguration()['description']);
+
+    switch ($payment_gateway->getPluginId()) {
+      case 'trustpay_card_gateway':
+        $sigData = sprintf("%d/%s/%s/%s/%d/%s/%s/%s/%s/%s/%s", $account_id, number_format($amount, 2, '.', ''), $currency, $reference, $paymentType, $billingcity, $billingcountry, $billingpostcode, $billingstreet, $cardholder, $email);
+        $signature = commerce_trustpay_get_signature($secretKey, $sigData);
+        $url = sprintf(
+          "%s?AccountId=%d&Amount=%s&Currency=%s&Reference=%s&PaymentType=%d&Signature=%s&BillingCity=%s&BillingCountry=%s&BillingPostcode=%s&BillingStreet=%s&CardHolder=%s&Email=%s&returnUrl=%s&cancelUrl=%s&errorUrl=%s&NotificationUrl=%s&Description=%s",
+          $base_url, $account_id, number_format($amount, 2, '.', ''), $currency, urlencode($reference), $paymentType, $signature, $billingcity, $billingcountry, $billingpostcode, $billingstreet, $cardholder, $email, $returnUrl, $cancelUrl, $errorUrl, $notifyUrl, $description);
+        break;
+      case 'trustpay_bank_transfers_gateway':
+        $sigData = sprintf("%d/%s/%s/%s/%d", $account_id, number_format($amount, 2, '.', ''), $currency, $reference, $paymentType);
+        $signature = commerce_trustpay_get_signature($secretKey, $sigData);
+        $url = sprintf(
+          "%s?AccountId=%d&Amount=%s&Currency=%s&Reference=%s&PaymentType=%d&Signature=%s&returnUrl=%s&cancelUrl=%s&errorUrl=%s&NotificationUrl=%s&Description=%s",
+          $base_url, $account_id, number_format($amount, 2, '.', ''), $currency, urlencode($reference), $paymentType, $signature, $returnUrl, $cancelUrl, $errorUrl, $notifyUrl, $description);
     }
     return $url;
   }

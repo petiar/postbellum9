@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * Template for the mail to the customer who did not finish their order.
+ *
+ * Available variables:
+ * - order: The order entity.
+ * - order_number: The order number.
+ * - site_name: The name of the website.
+ * - phone: The customer service phone number, configured on the abandoned carts
+ *   settings page.
+ *
+ * @ingroup themeable
+ */
+#}
+Milý zákazník,<br />
+
+<p>Radi by sme vám pripomenuli, že vo vašom <a href="{{ url('commerce_cart.page') }}">košíku</a> sa stále nachádzajú nejaké produkty, ktoré ste si asi chceli objednať, ale objednávku ste nedokončili.</p>
+<p>Ak máte o produkty stále záujem, budeme radi, ak sa k nám vrátite.</p>
+
+<p>Ak ste mali s objednávkou iný, napríklad technický problém, veľmi sa vám ospravedlňujeme a budeme radi, ak nám o ňom dáte vedieť v odpovedi na tento e-mail.</p>
+
+<p>Zoznam produktov vo vašom košíku:</p>
+<ul>
+{% for item in order.getItems %}
+<li><strong>{{ item.getTitle }}</strong></li>
+{% endfor %}
+</ul>
+
+S pozdravom,<br />
+<br />
+<a href="{{ url('<front>') }}">{{ site_name }}</a><br />
+
+Číslo objednávky: {{ order.id }}

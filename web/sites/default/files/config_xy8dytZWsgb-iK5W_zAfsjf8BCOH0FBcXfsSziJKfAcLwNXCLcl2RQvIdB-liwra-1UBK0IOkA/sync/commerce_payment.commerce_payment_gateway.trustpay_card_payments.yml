@@ -1,0 +1,23 @@
+uuid: 35182d83-ed8d-4bc2-9578-0cec2ade13ad
+langcode: sk
+status: true
+dependencies:
+  module:
+    - commerce_trustpay
+id: trustpay_card_payments
+label: 'Trustpay Card Payments'
+weight: null
+plugin: trustpay_card_gateway
+configuration:
+  display_label: 'Platba kartou cez Trustpay'
+  mode: test
+  payment_method_types:
+    - credit_card
+  collect_billing_information: true
+  aid: '4107481517'
+  secret: 1fnt6YsA9cNoUQTVcjEAh9S9rNlKnq0W
+  description: 'Platba kreditnou alebo debetnou kartou cez platobnú bránu Trustpay.'
+  0: notify_catcher_url
+  notify_catcher_url: 'https://postbellum.requestcatcher.com/test'
+conditions: {  }
+conditionOperator: AND

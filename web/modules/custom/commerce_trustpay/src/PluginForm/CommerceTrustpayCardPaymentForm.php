@@ -12,11 +12,12 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Url;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-class CommerceTrustpayPaymentForm extends PaymentOffsiteForm {
+class CommerceTrustpayCardPaymentForm extends PaymentOffsiteForm {
 
   use StringTranslationTrait;
 
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
+    $payment_gateway = $this->getEntity()->getPaymentGateway();
     $form = parent::buildConfigurationForm($form, $form_state);
     /** @var \Drupal\commerce_payment\Entity\PaymentInterface $payment */
     $payment = $this->entity;
@@ -25,28 +26,25 @@ class CommerceTrustpayPaymentForm extends PaymentOffsiteForm {
     /** @var \Drupal\commerce_order\Entity\OrderInterface $order */
     $order = $payment->getOrder();
 
-    $trustpayRequestGenerator = new TrustpayRequestGenerator($order);
-    $url = $trustpayRequestGenerator->generateRequestUrl(TrustpayRequestGenerator::TRUSTPAY_PAYMENT_REQUEST_URL);
+    $trustpayRequestGenerator = new TrustpayRequestGenerator($order, $payment);
+    $url = $trustpayRequestGenerator->generateRequestUrl($payment_gateway);
+
 
     $form['#attached']['library'][] = 'commerce_trustpay/checkout';
     $form['#attached']['drupalSettings']['commerce_trustpay']['url'] = $url;
 
     $form['actions'] = ['#type' => 'actions'];
     $form['actions']['submit'] = [
-      '#type' => 'link',
-      '#title' => $this->t('Pay via Trustpay'),
+      '#type' => 'button',
+      '#value' => $this->t('Pay via Trustpay'),
       '#attributes' => [
         'class' => ['show-popup']
       ],
-      '#url' => '#',
     ];
     $form['actions']['cancel'] = [
       '#type' => 'link',
       '#title' => $this->t('Cancel'),
       '#url' => Url::fromUri($form['#cancel_url']),
-      '#attributes' => [
-        'class' => ['show-popup']
-      ],
     ];
 
     // No need to call buildRedirectForm(), as we embed an iframe.

@@ -2,7 +2,7 @@ name: PostBellum
 type: theme
 description: 'Custom theme for the PostBellum eshop.'
 package: PostBellum
-core_version_requirement: ^9
+core_version_requirement: ^9 || ^10
 libraries:
   - postbellum/global-styling
 
@@ -17,6 +17,7 @@ regions:
   content: Content
   sidebar_first: Primary
   sidebar_second: Secondary
+  quote: Quote
   footer: Footer
   footer_1: Footer 1
   footer_2: Footer 2

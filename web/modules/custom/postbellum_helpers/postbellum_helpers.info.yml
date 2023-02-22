@@ -1,7 +1,7 @@
 name: 'PostBellum Helpers'
 type: module
 description: 'Some specific PostBellum functionality'
-core_version_requirement: ^9
+core_version_requirement: ^9 || ^10
 package: 'PostBellum'
 dependencies:
   - commerce_shipping

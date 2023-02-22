@@ -26,11 +26,16 @@ function commerce_trustpay_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_theme().
  */
-function commerce_trustpay_theme() {
+function commerce_trustpay_theme($existing, $type, $theme, $path) {
   return [
     'commerce_trustpay' => [
       'render element' => 'children',
     ],
+    'commerce_trustpay_error' => [
+      'variables' => [
+        'description' => NULL,
+      ]
+    ]
   ];
 }
 

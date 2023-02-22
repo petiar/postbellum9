@@ -17,6 +17,7 @@ module:
   color_field: 0
   comment: 0
   commerce: 0
+  commerce_abandoned_carts: 0
   commerce_agree_terms: 0
   commerce_cart: 0
   commerce_checkout: 0
@@ -101,6 +102,7 @@ module:
   trustpay: 0
   typed_data: 0
   update: 0
+  upgrade_status: 0
   user: 0
   views_bootstrap: 0
   views_ui: 0
