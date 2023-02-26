@@ -53,7 +53,7 @@
         "drupal/swiftmailer": "^2",
         "drupal/trustpay": "^1.0@alpha",
         "drupal/typed_data": "^1.0@beta",
-        "drupal/upgrade_status": "^3.18",
+        "drupal/upgrade_status": "^4.0@alpha",
         "drupal/views_bootstrap": "^3.1",
         "drush/drush": "^11.1",
         "mikehaertl/phpwkhtmltopdf": "^2.4",

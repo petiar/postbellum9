@@ -12,6 +12,7 @@ dependencies:
     - field.field.commerce_product.predplatne.field_main_image
     - field.field.commerce_product.predplatne.field_slogan
     - image.style.manual_crop
+    - image.style.manual_crop_16_9
   module:
     - blazy
     - commerce_product
@@ -64,32 +65,30 @@ content:
     type: blazy
     label: hidden
     settings:
-      caption: {  }
+      caption:
+        title: '0'
+        alt: '0'
       layout: ''
       view_mode: ''
       cache: 0
       skin: ''
+      lazy: ''
       style: ''
       background: false
       box_caption: ''
       box_caption_custom: ''
       box_media_style: ''
+      loading: ''
+      preload: true
       responsive_image_style: ''
       box_style: ''
-      image_style: ''
+      image_style: manual_crop_16_9
       media_switch: ''
       ratio: ''
       thumbnail_style: ''
       grid: ''
       grid_medium: ''
       grid_small: ''
-      breakpoints: {  }
-      current_view_mode: ''
-      fx: ''
-      icon: ''
-      sizes: ''
-      grid_header: ''
-      _uri: ''
     third_party_settings: {  }
     weight: 14
     region: content

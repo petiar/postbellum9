@@ -85,7 +85,6 @@ module:
   profile: 0
   rdf: 0
   rules: 0
-  s3fs: 0
   schema_metatag: 0
   schema_product: 0
   search: 0
