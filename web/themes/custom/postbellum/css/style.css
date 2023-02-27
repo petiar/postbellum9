@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Labrada:wght@300;400;700&family=Montserrat:wght@300;400;700&display=swap");
 body {
-  padding: 0px;
-  margin: 0px;
-  background-image: url("../assets/merch-holubica-stvorec.png");
+  padding: 0;
+  margin: 0;
+  background-image: url("../assets/merch-holubica-stvorec.webp");
   background-size: cover;
   background-position: center center;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
 }
 
 a {
@@ -59,8 +59,8 @@ h1, h2, h3 {
 }
 
 .navbar .logo {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .navbar .logo img {
   max-height: 35px;
@@ -82,7 +82,7 @@ article .field--name-price {
 }
 
 .carousel .item img {
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 .eu-cookie-compliance-banner {
@@ -141,7 +141,7 @@ article .field--name-price {
 .form-item-purchased-entity-0-attributes-attribute-obdobie label {
   min-height: auto;
   font-weight: bold;
-  padding: 0px 15px;
+  padding: 0 15px;
   font-size: 1.1em;
 }
 .form-item-purchased-entity-0-attributes-attribute-velkost input,
@@ -276,7 +276,7 @@ footer .container .nav > li > a:focus {
   }
   .layout--postbellum .small h2,
 .layout--postbellum .tiny h2 {
-    margin-top: 0px;
+    margin-top: 0;
   }
   .layout--postbellum .medium .text {
     width: 50%;
@@ -350,7 +350,7 @@ footer .container .nav > li > a:focus {
 }
 /* ugly hack for the checkboxes */
 .radio input[type=radio], .radio-inline input[type=radio], .checkbox input[type=checkbox], .checkbox-inline input[type=checkbox] {
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 ::-moz-selection {
