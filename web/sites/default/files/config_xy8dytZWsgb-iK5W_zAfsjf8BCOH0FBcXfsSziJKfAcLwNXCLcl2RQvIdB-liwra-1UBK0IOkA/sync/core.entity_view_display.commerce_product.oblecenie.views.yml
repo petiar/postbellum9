@@ -47,16 +47,21 @@ content:
     type: blazy
     label: hidden
     settings:
-      caption: {  }
+      caption:
+        title: '0'
+        alt: '0'
       layout: ''
       view_mode: ''
       cache: 0
       skin: ''
+      lazy: ''
       style: ''
       background: false
       box_caption: ''
       box_caption_custom: ''
       box_media_style: ''
+      loading: unlazy
+      preload: true
       responsive_image_style: ''
       box_style: ''
       image_style: manual_crop_4_3
@@ -66,13 +71,6 @@ content:
       grid: ''
       grid_medium: ''
       grid_small: ''
-      breakpoints: {  }
-      current_view_mode: ''
-      fx: ''
-      icon: ''
-      sizes: ''
-      grid_header: ''
-      _uri: ''
     third_party_settings: {  }
     weight: 3
     region: content

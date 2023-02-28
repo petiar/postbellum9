@@ -78,7 +78,7 @@ content:
       box_caption: ''
       box_caption_custom: ''
       box_media_style: ''
-      loading: ''
+      loading: unlazy
       preload: true
       responsive_image_style: ''
       box_style: ''
