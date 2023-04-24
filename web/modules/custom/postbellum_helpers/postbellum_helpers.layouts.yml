@@ -38,3 +38,13 @@ layout_postbellum:
       label: '4. riadok, štvrtá štvrtinka'
     bottom:
       label: 'Veľké dole'
+    block_5_1:
+      label: '5. riadok, tretinka vľavo'
+    block_5_2:
+      label: '5. riadok, tretinka v strede'
+    block_5_3:
+      label: '5. riadok, tretinke vpravo'
+    block_6_1:
+      label: '6. riadok, veľké vľavo'
+    block_6_2:
+      label: '6. riadok, malé vpravo'
