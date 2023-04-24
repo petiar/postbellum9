@@ -108,5 +108,39 @@
         {{ content.bottom }}
       </div>
     {% endif %}
+
+    <div class="row">
+      {% if content.block_5_1 %}
+        <div {{ region_attributes.block_5_1.addClass('layout__region', 'layout__region--first-middle', 'col-md-4', 'col-sm-6', 'col-xs-12', 'small') }}>
+          {{ content.block_5_1 }}
+        </div>
+      {% endif %}
+
+      {% if content.block_5_2 %}
+        <div {{ region_attributes.block_5_2.addClass('layout__region', 'layout__region--second-middle', 'col-md-4', 'col-sm-6', 'col-xs-12', 'small') }}>
+          {{ content.block_5_2 }}
+        </div>
+      {% endif %}
+
+      {% if content.block_5_3 %}
+        <div {{ region_attributes.block_5_3.addClass('layout__region', 'layout__region--third-middle', 'col-md-4', 'col-sm-6', 'col-xs-12', 'small') }}>
+          {{ content.block_5_3 }}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="row">
+      {% if content.block_6_1 %}
+        <div {{ region_attributes.block_6_1.addClass('layout__region', 'layout__region--first-above', 'col-md-8', 'col-sm-12', 'large') }}>
+          {{ content.block_6_1 }}
+        </div>
+      {% endif %}
+
+      {% if content.block_6_2 %}
+        <div {{ region_attributes.block_6_2.addClass('layout__region', 'layout__region--second-above', 'col-md-4', 'col-sm-12', 'small') }}>
+          {{ content.block_6_2 }}
+        </div>
+      {% endif %}
+    </div>
   </div>
 {% endif %}

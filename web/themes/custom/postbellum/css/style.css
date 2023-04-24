@@ -2,9 +2,6 @@
 body {
   padding: 0;
   margin: 0;
-  background-image: url("../assets/merch-holubica-stvorec.webp");
-  background-size: cover;
-  background-position: center center;
   font-family: Montserrat, sans-serif;
 }
 
@@ -300,6 +297,11 @@ footer .container .nav > li > a:focus {
   }
 }
 @media (min-width: 992px) {
+  body {
+    background-image: url("../assets/merch-holubica-stvorec.webp");
+    background-size: cover;
+    background-position: center center;
+  }
   .layout--postbellum .small,
 .layout--postbellum .tiny {
     overflow: hidden;
