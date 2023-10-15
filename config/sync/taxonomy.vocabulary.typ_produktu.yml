@@ -1,0 +1,8 @@
+uuid: 2774abec-e52e-44cc-ac18-46135715f4f6
+langcode: sk
+status: true
+dependencies: {  }
+name: 'Typ produktu'
+vid: typ_produktu
+description: 'Rozdelenie produktov podľa typu.'
+weight: 0

@@ -9,7 +9,9 @@ dependencies:
     - field.field.commerce_product.fyzicky_tovar.field_images
     - field.field.commerce_product.fyzicky_tovar.field_kratky_nazov
     - field.field.commerce_product.fyzicky_tovar.field_main_image
+    - field.field.commerce_product.fyzicky_tovar.field_skore
     - field.field.commerce_product.fyzicky_tovar.field_slogan
+    - field.field.commerce_product.fyzicky_tovar.field_typ_produktu
     - image.style.manual_crop
   module:
     - blazy
@@ -87,12 +89,29 @@ content:
     third_party_settings: {  }
     weight: 13
     region: content
+  field_skore:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
   field_slogan:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 14
+    region: content
+  field_typ_produktu:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 17
     region: content
   title:
     type: string

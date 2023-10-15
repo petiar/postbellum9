@@ -1,0 +1,20 @@
+uuid: 3ec6d9f4-62d2-42b0-ad44-74376ca84616
+langcode: sk
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - taxonomy
+id: commerce_product.field_typ_produktu
+field_name: field_typ_produktu
+entity_type: commerce_product
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: 233fd860-ca6c-487e-b96f-8c0d2e0f60fc
+langcode: sk
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_skore
+field_name: field_skore
+entity_type: commerce_product
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

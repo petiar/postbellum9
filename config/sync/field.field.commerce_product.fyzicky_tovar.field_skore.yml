@@ -1,0 +1,23 @@
+uuid: 8c612b92-3a43-4e65-8025-86ce33a4427f
+langcode: sk
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.fyzicky_tovar
+    - field.storage.commerce_product.field_skore
+id: commerce_product.fyzicky_tovar.field_skore
+field_name: field_skore
+entity_type: commerce_product
+bundle: fyzicky_tovar
+label: Skóre
+description: 'Podľa tohto poľa sa defaultne zoradia produkty. Čím vyššie skóre, tým budú zobrazené vyššie v zozname.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 10
+  prefix: ''
+  suffix: ''
+field_type: integer

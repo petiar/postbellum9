@@ -1,0 +1,11 @@
+uuid: b709cc65-d0c0-4b24-ae81-ea48dfca585e
+langcode: sk
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.typ_produktu
+id: taxonomy_term.typ_produktu
+target_entity_type_id: taxonomy_term
+target_bundle: typ_produktu
+default_langcode: site_default
+language_alterable: false

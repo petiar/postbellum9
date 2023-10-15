@@ -10,7 +10,9 @@ dependencies:
     - field.field.commerce_product.fyzicky_tovar.field_images
     - field.field.commerce_product.fyzicky_tovar.field_kratky_nazov
     - field.field.commerce_product.fyzicky_tovar.field_main_image
+    - field.field.commerce_product.fyzicky_tovar.field_skore
     - field.field.commerce_product.fyzicky_tovar.field_slogan
+    - field.field.commerce_product.fyzicky_tovar.field_typ_produktu
     - image.style.manual_crop_4_3
   module:
     - blazy
@@ -97,6 +99,8 @@ hidden:
   entity_print_view_word_docx: true
   field_dlhy_popis: true
   field_images: true
+  field_skore: true
+  field_typ_produktu: true
   langcode: true
   stores: true
   uid: true

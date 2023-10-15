@@ -3,11 +3,12 @@ langcode: sk
 status: true
 dependencies:
   config:
-    0: commerce_order.commerce_order_type.default
-    2: field.field.commerce_order.default.shipments
+    - commerce_order.commerce_order_type.default
+    - field.field.commerce_order.default.shipments
   module:
     - commerce_order
     - inline_entity_form
+    - path
 _core:
   default_config_hash: 1NKrIQBqELStd0cyiuHeNArhuPvOZj36faDEG1dWqEA
 id: commerce_order.default.default
@@ -34,6 +35,16 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  coupons:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   order_items:
     type: inline_entity_form_complex
     weight: 1
@@ -46,6 +57,13 @@ content:
       allow_new: true
       allow_existing: false
       match_operator: CONTAINS
+      removed_reference: delete
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true
