@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.7",
         "dompdf/dompdf": "^2.0.0",
         "drupal/admin_toolbar": "^3.3",
         "drupal/adminimal_theme": "^1.5",
@@ -53,6 +54,7 @@
         "drupal/search_api": "^1.12",
         "drupal/smtp": "^1.0@beta",
         "drupal/swiftmailer": "^2",
+        "drupal/telephone_international_widget": "^2.0@RC",
         "drupal/trustpay": "^1.0@alpha",
         "drupal/typed_data": "^1.0@beta",
         "drupal/upgrade_status": "^4.0@alpha",
@@ -63,6 +65,7 @@
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
+        "wikimedia/composer-merge-plugin": "^2.1",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "conflict": {
@@ -77,11 +80,18 @@
             "drupal/core-project-message": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "zaporylie/composer-drupal-optimizations": true,
-            "drupal/console-extend-plugin": true
+            "drupal/console-extend-plugin": true,
+            "wikimedia/composer-merge-plugin": true,
+            "cweagans/composer-patches": true
         },
         "sort-packages": true
     },
     "extra": {
+        "merge-plugin": {
+            "include": [
+                "web/modules/contrib/telephone_international_widget/composer.libraries.json"
+            ]
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
@@ -136,6 +146,11 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
+        },
+        "patches": {
+            "drupal/telephone_international_widget": {
+                "Initial country": "https://www.drupal.org/files/issues/2020-10-20/telephone_international_widget-initial-country-3177912.patch"
+            }
         }
     }
 }
