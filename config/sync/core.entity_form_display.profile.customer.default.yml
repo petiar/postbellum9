@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.profile.customer.address
+    - field.field.profile.customer.field_telefonne_cislo
     - profile.type.customer
   module:
     - address
+    - telephone_international_widget
   enforced:
     module:
       - commerce_order
@@ -22,6 +24,14 @@ content:
     weight: 0
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_telefonne_cislo:
+    type: telephone_international
+    weight: 26
+    region: content
+    settings:
+      placeholder: ''
+      initial_country: SK
     third_party_settings: {  }
 hidden:
   is_default: true

@@ -1,0 +1,21 @@
+uuid: 90bc4f06-6046-4ee5-bd70-4e79b35cb701
+langcode: sk
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_telefonne_cislo
+    - profile.type.customer
+  module:
+    - telephone
+id: profile.customer.field_telefonne_cislo
+field_name: field_telefonne_cislo
+entity_type: profile
+bundle: customer
+label: 'Telefónne číslo'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

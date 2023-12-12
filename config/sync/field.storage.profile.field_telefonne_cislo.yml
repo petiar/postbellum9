@@ -1,0 +1,19 @@
+uuid: 7d2b1b69-17d4-4c3e-84f2-533fa52404e6
+langcode: sk
+status: true
+dependencies:
+  module:
+    - profile
+    - telephone
+id: profile.field_telefonne_cislo
+field_name: field_telefonne_cislo
+entity_type: profile
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
